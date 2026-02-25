@@ -1,0 +1,115 @@
+[
+    {
+        "company": "CBPR, University of the Pacific",
+        "location": "Stockton, CA, USA",
+        "position": "Graduate Research Assistant",
+        "startDate": "2025-04-21",
+        "endDate": "Present",
+        "description": [
+            "Contributed to the development and deployment of two regional data platforms: an Angular SPA and a WordPress/CMS site for public access to research data.",
+            "Spearheaded the migration of the San Joaquin Data Compass from Angular to WordPress.",
+            "Developed lightweight JavaScript snippets that reduced visualization deployment time by over 50%.",
+            "Built and maintained 120+ interactive Highcharts visualizations for San Joaquin County regional metrics.",
+            "Engineered an ETL pipeline to fetch real-time data from FRED API for the visualizations using Firebase Functions."
+        ],
+        "projects": [
+            {
+                "name": "San Joaquin Data Compass - Migrated to WordPress",
+                "technologies": ["Wordpress", "JavaScript", "Highcharts", "Firebase"],
+                "contribution": "Built from Scratch",
+                "progress": "Completed",
+                "links": {
+                    "website": "https://sjcdata.org/"
+                }
+            },
+            {
+                "name": "North San Joaquin Valley (NSJV) Data Compass",
+                "technologies": ["Wordpress", "Highcharts", "Firebase Functions"],
+                "contribution": "Built from Scratch",
+                "progress": "In Progress",
+                "links": {
+                    "website": "https://datacompass.org/",
+                    "design": {
+                        "figma": "https://www.figma.com/design/xVRHdYDKTpEJwIOdFjXVFg/NSJV-Figma-design?node-id=0-1&t=wIjNdjs7FgQ0FIjc-1",
+                        "prototype": "https://www.figma.com/proto/xVRHdYDKTpEJwIOdFjXVFg/NSJV-Figma-design?node-id=95-744&p=f&t=NUKFaTNDpOjHmnEB-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=120%3A2634"
+                    }
+                }
+            },
+            {
+                "name": "San Joaquin Data Compass",
+                "technologies": ["Angular", "Highcharts", "Firebase"],
+                "contribution": "Feature Development",
+                "progress": "Deprecated",
+                "links": {
+                    "website": "https://sj-data-compass.web.app/home"
+                }
+            },
+            {
+                "name": "LAFCO - San Joaquin",
+                "technologies": ["Wordpress", "Highcharts"],
+                "contribution":"Maintenance and Optimization",
+                "progress": "Completed",
+                "links": {
+                    "website": "https://datacompass.org/SJ-LAFCO/"
+                }
+            },
+            {
+                "name": "Pacific CBPR - Company Website",
+                "technologies": ["Wordpress", "Highcharts"],
+                "contribution":"Maintenance and Optimization",
+                "progress": "Completed",
+                "links": {
+                    "website": "https://www.pacificcbpr.org/"
+                }
+            }
+        ]
+    },
+    {
+        "company": "Tech Holding",
+        "location": "Ahmedabad, Gujarat, India",
+        "position": "Full Stack Developer Intern",
+        "startDate": "2024-01-01",
+        "endDate": "2024-04-30",
+        "description": [
+            "Contributed to development of Simple Plan, an internal project management tool supporting sprint tracking, task assignment, team management, and Epic creation.",
+            "Implemented GraphQL Data Loaders to eliminate N+1 query issues, improving query performance by 70%.",
+            "Rewrote the backend using GraphQL and Sequelize ORM to improve application performance.",
+            "Refactored frontend state management to remove redundant API calls, reducing load time by ~2s."
+        ],
+        "projects": [
+            {
+                "name": "Internal Project Management Tool",
+                "technologies": ["React", "TypeScript", "GraphQL", "Sequelize", "Node.js", "PostgreSQL", "Express"],
+                "contribution":"Feature Development",
+                "progress": "In Progress",
+                "links": {
+                    "design": {
+                        "dribbble": "https://dribbble.com/shots/25027030-Simple-Plan-Project-management"
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "company": "Jarvis Technolabs",
+        "location": "Ahmedabad, Gujarat, India",
+        "position": "Frontend Developer Intern",
+        "startDate": "2023-06-05",
+        "endDate": "2023-07-14",
+        "description": [
+            "Developed frontend features for Trugo India, an e-commerce platform for cement product ordering.",
+            "Implemented protected and public routing using React Router to improve security and navigation.",
+            "Built reusable UI components and frontend features using React and Axios to enhance maintainability."
+        ],
+        "projects": [
+            {
+                "name": "Private E-commerce Platform",
+                "technologies": ["React", "TypeScript", "Axios"],
+                "contribution":"Feature Development",
+                "progress": "Completed"
+            }
+        ]
+    }
+]
+
+
