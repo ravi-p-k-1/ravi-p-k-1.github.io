@@ -1,0 +1,150 @@
+{
+    "languages": [
+        {
+            "name": "JavaScript",
+            "familiarity": "High"
+        },
+        {
+            "name": "TypeScript",
+            "familiarity": "High"
+        },
+        {
+            "name": "HTML/CSS",
+            "familiarity": "High"
+        },
+        {
+            "name": "Python",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "Java",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "C++",
+            "familiarity": "High"
+        }
+    ],
+    "frameworks": [
+        {
+            "name": "React",
+            "familiarity": "High"
+        },
+        {
+            "name": "Angular",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "Node.js",
+            "familiarity": "High"
+        },
+        {
+            "name": "Astro.js",
+            "familiarity": "Low"
+        },
+        {
+            "name": "Spring Boot",
+            "familiarity": "Low"
+        }
+    ],
+    "libraries": [
+        {
+            "name": "Highcharts",
+            "familiarity": "High"
+        },
+        {
+            "name": "AG Grid",
+            "familiarity": "High"
+        },
+        {
+            "name": "Redux",
+            "familiarity": "High"
+        },
+        {
+            "name": "GraphQL",
+            "familiarity": "High"
+        },
+        {
+            "name": "Bootstrap",
+            "familiarity": "High"
+        },
+        {
+            "name": "Material-UI",
+            "familiarity": "High"
+        },
+        {
+            "name": "Sequelize",
+            "familiarity": "High"
+        },
+        {
+            "name": "Hibernate",
+            "familiarity": "Low"
+        }
+    ],
+    "toolsAndDevOps": [
+        {
+            "name": "Git",
+            "familiarity": "High"
+        },
+        {
+            "name": "GitHub Actions",
+            "familiarity": "Low"
+        },
+        {
+            "name": "Docker",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "Firebase",
+            "familiarity": "High"
+        },
+        {
+            "name": "Figma",
+            "familiarity": "High"
+        },
+        {
+            "name": "Jira",
+            "familiarity": "High"
+        }
+    ],
+    "databases": [
+        {
+            "name": "PostgreSQL",
+            "familiarity": "High"
+        },
+        {
+            "name": "MongoDB",
+            "familiarity": "High"
+        },
+        {
+            "name": "Oracle SQL",
+            "familiarity": "Medium"
+        }
+    ],
+    "cmsAndApi": [
+        {
+            "name": "WordPress",
+            "familiarity": "High"
+        },
+        {
+            "name": "Directus.io",
+            "familiarity": "Low"
+        },
+        {
+            "name": "RESTful APIs",
+            "familiarity": "High"
+        }
+    ],
+    "agileMethodologies": [
+        {
+            "name": "Scrum",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "Kanban",
+            "familiarity": "Medium"
+        }
+    ]
+}
+
+

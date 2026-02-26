@@ -1,0 +1,36 @@
+[
+    {
+        "college": "University of the Pacific",
+        "location": "Stockton, CA, USA",
+        "degree": "Master of Science",
+        "major": "Computer Science",
+        "status": "Ongoing",
+        "startDate": "2024-08-19",
+        "endDate": "2026-05-06",
+        "graduationDate": {
+            "format": "string",
+            "value": "Expected May 2026"
+        },
+        "gpa": {
+            "score": "3.96/4.00"
+        }
+    },
+    {
+        "college": "Institute of Technology, Nirma University",
+        "location": "Ahmedabad, Gujarat, India",
+        "degree": "Bachelor of Technology",
+        "major": "Computer Science Engineering",
+        "status": "Completed",
+        "startDate": "2020-10-01",
+        "endDate": "2024-05-01",
+        "graduationDate": {
+            "format": "Date",
+            "value": "2024-11-22"
+        },
+        "gpa": {
+            "score": "3.69/4.00",
+            "equivalent": "U.S. Equivalent Score",
+            "originalScore": "8.09/10.00"
+        }
+    }
+]

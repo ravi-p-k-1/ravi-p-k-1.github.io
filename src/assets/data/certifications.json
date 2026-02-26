@@ -1,0 +1,34 @@
+[
+    {
+        "name": "AWS Certified Cloud Practitioner",
+        "issuer": "Udemy",
+        "issueDate": "2025-01-29",
+        "links": {
+            "certificate": "http://ude.my/UC-2270d451-cff3-448b-8387-d8c18c64a7e2"
+        }
+    },
+    {
+        "name": "React (Basic)",
+        "issuer": "HackerRank",
+        "issueDate": "2025-01-06",
+        "links": {
+            "certificate": "https://www.hackerrank.com/certificates/11b7edb5e979"
+        }
+    },
+    {
+        "name": "JavaScript (Basic)",
+        "issuer": "HackerRank",
+        "issueDate": "2025-01-09",
+        "links": {
+            "certificate": "https://www.hackerrank.com/certificates/1f0b638ee886"
+        }
+    },
+    {
+        "name": "Java (Basic)",
+        "issuer": "HackerRank",
+        "issueDate": "2022-06-14",
+        "links": {
+            "certificate": "https://www.hackerrank.com/certificates/225fc3eeb1a6"
+        }
+    }
+]

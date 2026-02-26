@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Releasetrain.io",
+        "technologies": ["Python", "TensorFlow", "NLP"],
+        "contribution": "Built from Scratch",
+        "progress": "Completed",
+        "description": [
+            "Developed and trained an ML/NLP model for automated update-path risk detection used in the Releasetrain.io dashboard.",
+            "Created labelling guidelines and annotated 4,000+ web-scraped Reddit samples to support ML model training.",
+            "Performed hyperparameter tuning on the ML model, achieving 97% accuracy and a 67% F1-score."
+        ],
+        "links": {
+            "website": "https://releasetrain.io/dashboard/"
+        }
+    },
+    {
+        "name": "Sproutly",
+        "technologies": ["React.js", "Docker"],
+        "contribution": "Built from Scratch",
+        "progress": "Completed",
+        "description": [
+            "Built dashboard for an IoT watering system enabling real-time monitoring and 15-minute automated updates.",
+            "Led a 4-member team to design frontend architecture and deliver a functional prototype in 3 months.",
+            "Containerized the app using Docker to streamline deployment and ensure environment consistency."
+        ],
+        "links": {
+            "github": "https://github.com/SE4CPS/PlantWaterSystem",
+            "design": {
+                "figma": "https://www.figma.com/design/iq7vTHWK9cIXwgeryCsMyi/Sproutly-Prototype?node-id=0-1&t=7vCtu8lekJ4F8DKn-1",
+                "prototype": "https://www.figma.com/proto/iq7vTHWK9cIXwgeryCsMyi/Sproutly-Prototype?node-id=0-1&t=7vCtu8lekJ4F8DKn-1"
+            }
+        }
+    },
+    {
+        "name": "Emergency Service Provisioning for IOV",
+        "technologies": ["Python", "SUMO", "Traci"],
+        "contribution": "Built from Scratch",
+        "progress": "Completed",
+        "description": [
+            "Utilized SUMO simulation for implementing the Deep-Q-network responsible for automation of emergency vehicle, aiming to reduce emergency response time.",
+            "Reduced emergency response time from 289 ms to 275 ms (~4.8% improvement) across training episodes.",
+            "Outperformed rule-based baselines (Heuristic & MOBIL) with ~7–8% lower latency, demonstrating the effectiveness of adaptive RL-driven vehicle communication."
+        ],
+        "links": {
+            "website": "https://github.com/ravi-p-k-1/Emergency-service-provisioning-for-internet-of-vehicles-college-project"
+        }
+    }
+]
+
