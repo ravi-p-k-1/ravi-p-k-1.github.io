@@ -24,7 +24,7 @@
 }
 
 .sidebar-list-item-link:hover {
-    transform: scale(1.18);
+    transform: scale(1.15);
     transition: transform 800ms ease;
 }
 

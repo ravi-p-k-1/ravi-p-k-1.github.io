@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react'
 import SidebarListItem from '../components/SidebarListItem'
 import '../assets/styles/sidebar.css'
+import profileImg from '../assets/images/profile-photo.jpg'
 
 export default function Sidebar() {
 
@@ -35,8 +36,8 @@ export default function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <div className='profile-image'>
-        
+      <div className='profile-image-container'>
+        <img className='profile-image' src={profileImg} alt=''/>
       </div>
       <div className='contact'></div>
       <div className='sidebar-list' ref={navRef} onMouseLeave={hideHoverIndicator}>
