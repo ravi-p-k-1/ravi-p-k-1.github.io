@@ -1,18 +1,14 @@
 /* Sidebar List Item CSS */
 
 .sidebar-list-item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
     width: 100%;
     border-radius: 10px;
-}
-
-.sidebar-list-item:hover {
-    background-color: #ffffff27;
-    box-shadow: inset 0 0 0 2px #ffffff;
-    transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .sidebar-list-item-link {
@@ -25,6 +21,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.sidebar-list-item-link:hover {
+    transform: scale(1.18);
+    transition: transform 800ms ease;
 }
 
 
