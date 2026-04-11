@@ -2,16 +2,21 @@ import { useRef, useState } from 'react'
 import SidebarListItem from '../components/SidebarListItem'
 import '../assets/styles/sidebar.css'
 import profileImg from '../assets/images/profile-photo.jpg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 export default function Sidebar() {
 
-  // Home -> summary, skill, reviews
-  // About -> Education, Certifications, Profiles
   const navItems = [
-    { name: "Home", link: "/" },
-    { name: "Work Experience", link: "/work-experience" },
-    { name: "Projects", link: "/projects" },
-    { name: "About", link: "/about" }
+    { name: "About Me", link: "#aboutMe" },
+    { name: "Skills", link: "#skills" },
+    { name: "Work Experience", link: "#workExperience" },
+    { name: "Projects", link: "#projects" },
+    { name: "Education", link: "#education" },
+    { name: "Reviews", link: "#reviews" },
+    { name: "Certifications", link: "#certifications" },
+    { name: "Profiles", link: "#profiles" },
   ];
 
   const navRef = useRef(null);
@@ -39,7 +44,6 @@ export default function Sidebar() {
       <div className='profile-image-container'>
         <img className='profile-image' src={profileImg} alt=''/>
       </div>
-      <div className='contact'></div>
       <div className='sidebar-list' ref={navRef} onMouseLeave={hideHoverIndicator}>
         <span className="hover-indicator" style={indicatorStyle}></span>
         {
@@ -47,6 +51,17 @@ export default function Sidebar() {
             <SidebarListItem key={index} itemName={item.name} itemLink={item.link} hoverFunction={moveHoverIndicator} />
           ))
         }
+      </div>
+      <div className='contact'>
+        <a href='https://github.com/ravi-p-k-1' target='_blank' rel='noreferrer'>
+          <FontAwesomeIcon className='sidebar-icon' icon={faGithub} size='2x' color='#ffffff' />
+        </a>
+        <a href='https://www.linkedin.com/in/r-kakadia/' target='_blank' rel='noreferrer'>
+          <FontAwesomeIcon className='sidebar-icon' icon={faLinkedin} size='2x' color='#ffffff' />
+        </a>
+        <a href='mailto:r_kakadia@u.pacific.edu'>
+          <FontAwesomeIcon className='sidebar-icon' icon={faEnvelope} size='2x' color='#ffffff' />
+        </a>
       </div>
     </div>
   )

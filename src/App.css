@@ -3,3 +3,38 @@
   height: 100%;
 }
 
+main {
+  overflow: auto;
+}
+
+/* Section */
+
+.section {
+  padding: 50px 100px;
+}
+
+main .section:first-child {
+  padding-top: 150px;
+}
+
+main .section:last-child {
+  padding-bottom: 150px;
+}
+
+.section-title {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* border-bottom: 1px solid #58a3ff; */
+  color: #58a3ff;
+}
+
+.section-content {
+  padding: 0px 20px
+;}
+
+.text-justified {
+  text-align: justify;
+}
+
+

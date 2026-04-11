@@ -1,11 +1,27 @@
 [
     {
         "name": "Steven McCarty",
-        "position": "Research Analyst II",
-        "relation": "Supervisor at CBPR",
-        "email": "smccarty@pacific.edu",
-        "phone": "209.946.2623",
+        "position": "Research Analyst II, CBPR",
+        "relation": "Supervisor",
         "review": "It has been a great experience to work with Ravi. In my experience, he has been reliable and creative with designing needed solutions."
+    },
+    {
+        "name": "Solomon Berhe",
+        "position": "Assistant Professor of Computer Science",
+        "relation": "Student Advisor",
+        "review": "I have known Ravi for the past two years as his academic advisor, course instructor, and research advisor. He consistently performed in the top 10% of his cohort in NoSQL Database Management Systems and Software Engineering in Industry 4.0 Ecosystems. Through his coursework, he effectively integrated NLP, databases, and machine learning into a research project that he plans to submit for publication in Spring 2026. Ravi approaches tasks thoughtfully, ensuring he understands rules and constraints before taking action. He is principled, collaborative, and reliable. On a personal level, working with him has been my pleasure, and I am confident he will strengthen any team he joins."
+    },
+    {
+        "name": "Maria Tcha",
+        "position": "Associate Director, Pacific Global",
+        "relation": "Supervisor",
+        "review": "I had the pleasure of supervising Ravi during his time as a Pacific Global Student Assistant. From the beginning, he showed a high level of self‑motivation, often taking the initiative to learn processes thoroughly and anticipate student needs before being asked. His ability to work independently while still staying aligned with team goals made him a dependable and trusted member of our office. Ravi played an important role in supporting international students by providing accurate and timely assistance with address confirmations, official letters, and immigration‑related documentation. He consistently demonstrated professionalism, discretion, and strong attention to detail when handling sensitive information. Students frequently commented on how approachable and patient he was, especially when navigating complex requirements. Beyond his front‑desk responsibilities, Ravi collaborated closely with the DSO team on administrative tasks and event coordination. He communicated clearly, adapted quickly to shifting priorities, and contributed positively to team dynamics. His reliability, organizational skills, and willingness to step in wherever needed strengthened our overall service to the international student community. I highly recommend Ravi for any role requiring strong communication skills, initiative, teamwork, and a commitment to service."
+    },
+    {
+        "name": "Patrick Wolak",
+        "position": "Ex-Director, Pacific Global",
+        "relation": "Supervisor",
+        "review": "Services at the University of the Pacific. Ravi worked at our front desk, where he was often the first point of contact for students, staff, and visitors—and he consistently made a strong, positive impression. He brought a calm, professional presence to a fast-paced environment and handled a wide range of questions with patience, accuracy, and genuine care. Ravi was especially effective in supporting international students, demonstrating strong communication skills and cultural awareness in every interaction. What stood out most was his reliability and initiative. I could trust Ravi to manage the front desk independently, problem-solve in the moment, and represent our office with professionalism. I highly recommend Ravi and am confident he will be an asset in any role he takes on"
     }
 ]
 

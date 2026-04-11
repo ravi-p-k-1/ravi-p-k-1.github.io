@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 40px;
     width: 100%;
     border-radius: 10px;
     z-index: 1;
@@ -28,6 +28,24 @@
     transition: transform 800ms ease;
 }
 
+/* Separator */
 
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0px 400px;
+}
 
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #58a3ff;
+}
+
+.diamond {
+  color: #58a3ff;
+  font-size: 30px;
+}
 

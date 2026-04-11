@@ -9,7 +9,11 @@
             "familiarity": "High"
         },
         {
-            "name": "HTML/CSS",
+            "name": "HTML5",
+            "familiarity": "High"
+        },
+        {
+            "name": "CSS3",
             "familiarity": "High"
         },
         {
@@ -22,6 +26,7 @@
         },
         {
             "name": "C++",
+            "deviconCode": "cplusplus",
             "familiarity": "High"
         }
     ],
@@ -36,25 +41,30 @@
         },
         {
             "name": "Node.js",
-            "familiarity": "High"
+            "familiarity": "High",
+            "deviconCode": "nodejs"
         },
         {
             "name": "Astro.js",
-            "familiarity": "Low"
+            "familiarity": "Low",
+            "deviconCode": "astro"
         },
         {
             "name": "Spring Boot",
-            "familiarity": "Low"
+            "familiarity": "Low",
+            "deviconCode": "spring"
         }
     ],
     "libraries": [
         {
             "name": "Highcharts",
-            "familiarity": "High"
+            "familiarity": "High",
+            "isDeviconAvailable": false
         },
         {
             "name": "AG Grid",
-            "familiarity": "High"
+            "familiarity": "High",
+            "isDeviconAvailable": false
         },
         {
             "name": "Redux",
@@ -70,7 +80,8 @@
         },
         {
             "name": "Material-UI",
-            "familiarity": "High"
+            "familiarity": "High",
+            "deviconCode": "materialui"
         },
         {
             "name": "Sequelize",
@@ -88,11 +99,17 @@
         },
         {
             "name": "GitHub Actions",
-            "familiarity": "Low"
+            "familiarity": "Low",
+            "deviconCode": "githubactions"
         },
         {
             "name": "Docker",
             "familiarity": "Medium"
+        },
+        {
+            "name": "AWS",
+            "familiarity": "Medium",
+            "deviconCode": "amazonwebservices"
         },
         {
             "name": "Firebase",
@@ -117,8 +134,8 @@
             "familiarity": "High"
         },
         {
-            "name": "Oracle SQL",
-            "familiarity": "Medium"
+            "name": "MySQL",
+            "familiarity": "High"
         }
     ],
     "cmsAndApi": [
@@ -128,11 +145,13 @@
         },
         {
             "name": "Directus.io",
-            "familiarity": "Low"
+            "familiarity": "Low",
+            "isDeviconAvailable": false
         },
         {
             "name": "RESTful APIs",
-            "familiarity": "High"
+            "familiarity": "High",
+            "isDeviconAvailable": false
         }
     ],
     "agileMethodologies": [
