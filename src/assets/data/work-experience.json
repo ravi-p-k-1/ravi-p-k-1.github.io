@@ -2,25 +2,29 @@
     {
         "company": "CBPR, University of the Pacific",
         "location": "Stockton, CA, USA",
-        "position": "Graduate Research Assistant",
+        "position": "Web Developer",
         "startDate": "2025-04-21",
-        "endDate": "Present",
+        "endDate": "2026-05-06",
         "description": [
-            "Contributed to the development and deployment of two regional data platforms: an Angular SPA and a WordPress/CMS site for public access to research data.",
-            "Spearheaded the migration of the San Joaquin Data Compass from Angular to WordPress.",
-            "Developed lightweight JavaScript snippets that reduced visualization deployment time by over 50%.",
-            "Built and maintained 120+ interactive Highcharts visualizations for San Joaquin County regional metrics.",
-            "Engineered an ETL pipeline to fetch real-time data from FRED API for the visualizations using Firebase Functions."
+            "Built and maintained 120+ interactive Highcharts visualizations powered by a custom ETL pipeline and serverless REST API (Firebase Functions + FRED), transforming complex data into actionable insights.",
+            "Engineered high-performance, virtualization-enabled data tables for content-heavy pages, boosting rendering speed and overall application performance by up to 90%.",
+            "Integrated reusable JavaScript automation snippets that reduced average visualization development time from 1 hour to 15 minutes (75% faster delivery).",
+            "Standardized workflows using automation with assistance from generative AI and GitHub Copilot, improving consistency and reducing errors by over 50%.",
+            "Led migration of a production Angular SPA to WordPress CMS within 2 months with no disruption.",
+            "Collaborated cross-functionally to deliver data-driven applications and maintain a well-documented, scalable codebase for smooth handovers and team continuity."
         ],
+        "isDisplayProjects": true,
         "projects": [
             {
-                "name": "San Joaquin Data Compass - Migrated to WordPress",
+                "name": "San Joaquin Data Compass",
                 "technologies": ["Wordpress", "JavaScript", "Highcharts", "Firebase"],
                 "contribution": "Built from Scratch",
                 "progress": "Completed",
                 "links": {
                     "website": "https://sjcdata.org/"
-                }
+                },
+                "image": "sjc.png",
+                "description" : "SJC Data Compass is a regional data visualization platform designed to provide accessible, interactive, and data-driven insights for San Joaquin County. The platform transforms complex public datasets into user-friendly charts, dashboards, and downloadable reports covering areas such as employment, housing, education, public health, demographics, and economic development. It integrates data from public sources including FRED, BEA, and California state agencies into responsive visualizations, downloadable datasets, and interactive dashboards that support data-driven decision-making for policymakers, researchers, organizations, and community members."
             },
             {
                 "name": "North San Joaquin Valley (NSJV) Data Compass",
@@ -28,64 +32,32 @@
                 "contribution": "Built from Scratch",
                 "progress": "In Progress",
                 "links": {
-                    "website": "https://datacompass.org/",
-                    "design": {
-                        "figma": "https://www.figma.com/design/xVRHdYDKTpEJwIOdFjXVFg/NSJV-Figma-design?node-id=0-1&t=wIjNdjs7FgQ0FIjc-1",
-                        "prototype": "https://www.figma.com/proto/xVRHdYDKTpEJwIOdFjXVFg/NSJV-Figma-design?node-id=95-744&p=f&t=NUKFaTNDpOjHmnEB-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=120%3A2634"
-                    }
-                }
-            },
-            {
-                "name": "San Joaquin Data Compass",
-                "technologies": ["Angular", "Highcharts", "Firebase"],
-                "contribution": "Feature Development",
-                "progress": "Deprecated",
-                "links": {
-                    "website": "https://sj-data-compass.web.app/home"
-                }
-            },
-            {
-                "name": "LAFCO - San Joaquin",
-                "technologies": ["Wordpress", "Highcharts"],
-                "contribution":"Maintenance and Optimization",
-                "progress": "Completed",
-                "links": {
-                    "website": "https://datacompass.org/SJ-LAFCO/"
-                }
-            },
-            {
-                "name": "Pacific CBPR - Company Website",
-                "technologies": ["Wordpress", "Highcharts"],
-                "contribution":"Maintenance and Optimization",
-                "progress": "Completed",
-                "links": {
-                    "website": "https://www.pacificcbpr.org/"
-                }
+                    "website": "https://datacompass.org/nsjv/",
+                    "figma": "https://www.figma.com/design/xVRHdYDKTpEJwIOdFjXVFg/NSJV-Figma-design?node-id=0-1&t=wIjNdjs7FgQ0FIjc-1"
+                },
+                "image": "nsjv.png",
+                "description" : "The North San Joaquin Valley (NSJV) Data Compass is an interactive regional analytics platform focused on combining and visualizing socioeconomic data across multiple counties within the North San Joaquin Valley region. The platform integrates public datasets from sources such as FRED, BEA, and California state agencies into scalable web-based visualizations, downloadable datasets, and interactive dashboards. It was designed to support regional planning, economic analysis, and public accessibility through reusable chart templates, dynamic filtering systems, high-performance data tables, and responsive user experiences."
             }
         ]
     },
     {
         "company": "Tech Holding",
         "location": "Ahmedabad, Gujarat, India",
-        "position": "Full Stack Developer Intern",
+        "position": "Full Stack Developer",
         "startDate": "2024-01-01",
         "endDate": "2024-04-30",
         "description": [
-            "Contributed to development of Simple Plan, an internal project management tool supporting sprint tracking, task assignment, team management, and Epic creation.",
-            "Implemented GraphQL Data Loaders to eliminate N+1 query issues, improving query performance by 70%.",
-            "Rewrote the backend using GraphQL and Sequelize ORM to improve application performance.",
-            "Refactored frontend state management to remove redundant API calls, reducing load time by ~2s."
+            "Pioneered key frontend features for a project management tool and improved backend performance by eliminating N+1 query issues in GraphQL using data loaders, increasing query efficiency by 70%.",
+            "Improved frontend performance by refining state management in React to eliminate redundant API calls, reducing load time by ~2 seconds and delivering a smoother user experience."
         ],
         "projects": [
             {
-                "name": "Internal Project Management Tool",
+                "name": "Project Management Tool",
                 "technologies": ["React", "TypeScript", "GraphQL", "Sequelize", "Node.js", "PostgreSQL", "Express"],
                 "contribution":"Feature Development",
                 "progress": "In Progress",
                 "links": {
-                    "design": {
-                        "dribbble": "https://dribbble.com/shots/25027030-Simple-Plan-Project-management"
-                    }
+                    "dribbble": "https://dribbble.com/shots/25027030-Simple-Plan-Project-management"
                 }
             }
         ]
@@ -97,13 +69,11 @@
         "startDate": "2023-06-05",
         "endDate": "2023-07-14",
         "description": [
-            "Developed frontend features for Trugo India, an e-commerce platform for cement product ordering.",
-            "Implemented protected and public routing using React Router to improve security and navigation.",
-            "Built reusable UI components and frontend features using React and Axios to enhance maintainability."
+            "Created reusable frontend components, implemented secure role-based routing, and handled debugging and maintenance for an e-commerce application."
         ],
         "projects": [
             {
-                "name": "Private E-commerce Platform",
+                "name": "E-commerce Platform",
                 "technologies": ["React", "TypeScript", "Axios"],
                 "contribution":"Feature Development",
                 "progress": "Completed"

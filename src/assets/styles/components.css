@@ -49,3 +49,148 @@
   font-size: 30px;
 }
 
+/* Slider */
+
+.slider {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 18px 0;
+}
+
+.slider,
+.slider * {
+  box-sizing: border-box;
+}
+
+.slider-content {
+  overflow: hidden;
+  border: 1px solid rgba(88, 163, 255, 0.35);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.slider-track {
+  display: flex;
+  width: 100%;
+  transition: transform 350ms ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  max-width: 100%;
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.slide-header {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.slide-header img {
+  width: 150px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.slide-header h3 {
+  margin: 0;
+  color: #58a3ff;
+  font-size: 24px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.slide-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.slide-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.slide-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 6px 14px;
+  border: 1px solid #58a3ff;
+  border-radius: 6px;
+  color: #0173ff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.slide-links a:hover {
+  background: #58a3ff;
+  color: #ffffff;
+}
+
+.slider-prev button,
+.slider-next button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(88, 163, 255, 0.5);
+  border-radius: 50%;
+  background: #ffffff;
+  color: #111111;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-prev button:hover,
+.slider-next button:hover {
+  background: #58a3ff;
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .slider {
+    grid-template-columns: 36px minmax(0, 1fr) 36px;
+    gap: 8px;
+  }
+
+  .slider-prev button,
+  .slider-next button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .slide {
+    padding: 12px;
+  }
+
+  .slide-header {
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .slide-header img {
+    width: 88px;
+  }
+
+  .slide-header h3 {
+    font-size: 18px;
+  }
+}
+

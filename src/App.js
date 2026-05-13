@@ -20,9 +20,11 @@ function App() {
         <AboutMe />
         <Separator />
         <Skills />
-        {/* <WorkExperience />
+        <Separator />
+        <WorkExperience />
+        <Separator />
         <Projects />
-        <Education />
+        {/* <Education />
         <Reviews />
         <Certifications />
         <Profiles /> */}

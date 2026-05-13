@@ -1,0 +1,45 @@
+/* Work Experience */
+
+.work-experience-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+
+.work-experience-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-name {
+    font-size: 30px;
+    font-weight: bold;
+    color: #58a3ff;
+}
+
+.company-location, .position-info {
+    font-size: 18px;
+    font-style: italic;
+    color: darkgray;
+}
+
+.work-experience-description li {
+    font-size: 18px;
+}
+
+.selected-projects {
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.selected-projects h3 {
+    margin: 0 0 12px;
+    color: #58a3ff;
+    font-size: 24px;
+    font-weight: 500;
+}
