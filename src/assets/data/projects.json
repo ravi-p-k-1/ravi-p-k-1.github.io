@@ -5,10 +5,11 @@
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Developed and trained an ML/NLP model for automated update-path risk detection used in the Releasetrain.io dashboard.",
-            "Created labelling guidelines and annotated 4,000+ web-scraped Reddit samples to support ML model training.",
-            "Performed hyperparameter tuning on the ML model, achieving 97% accuracy and a 67% F1-score."
+            "Developed an ML/NLP pipeline for automated risk detection from unstructured data, including preprocessing and TF-IDF feature engineering.",
+            "Defined labeling guidelines and annotated 4,000+ samples, improving data quality and reducing bias.",
+            "Achieved 97% accuracy and 67% F1-score through hyperparameter tuning, improving model performance and reliability."
         ],
+        "image": "releasetrain.jpg",
         "links": {
             "website": "https://releasetrain.io/dashboard/"
         }
@@ -19,10 +20,10 @@
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Built dashboard for an IoT watering system enabling real-time monitoring and 15-minute automated updates.",
-            "Led a 4-member team to design frontend architecture and deliver a functional prototype in 3 months.",
-            "Containerized the app using Docker to streamline deployment and ensure environment consistency."
+            "Built a real-time dashboard for an IoT-based smart watering system, enabling live sensor monitoring and automated 15-minute status updates.",
+            "Led a 4-member team in designing the frontend architecture and containerizing the application with Docker for streamlined deployment."
         ],
+        "image": "sproutly.jpg",
         "links": {
             "github": "https://github.com/SE4CPS/PlantWaterSystem",
             "design": {
@@ -37,12 +38,13 @@
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Utilized SUMO simulation for implementing the Deep-Q-network responsible for automation of emergency vehicle, aiming to reduce emergency response time.",
-            "Reduced emergency response time from 289 ms to 275 ms (~4.8% improvement) across training episodes.",
-            "Outperformed rule-based baselines (Heuristic & MOBIL) with ~7–8% lower latency, demonstrating the effectiveness of adaptive RL-driven vehicle communication."
+            "Built a reinforcement learning–based V2X simulation for emergency vehicle routing in urban traffic to optimize response time and routing efficiency in critical scenarios.",
+            "Reduced emergency response time by ~4.8%, improving routing efficiency across training episodes.",
+            "Achieved ~8% lower latency vs rule-based approaches, improving efficiency and responsiveness in vehicle communication systems."
         ],
+        "image": "esvpiov.png",
         "links": {
-            "website": "https://github.com/ravi-p-k-1/Emergency-service-provisioning-for-internet-of-vehicles-college-project"
+            "github": "https://github.com/ravi-p-k-1/Emergency-service-provisioning-for-internet-of-vehicles-college-project"
         }
     }
 ]
