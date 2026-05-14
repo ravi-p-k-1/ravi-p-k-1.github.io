@@ -1,0 +1,108 @@
+/* Education */
+
+.education-list {
+    display: grid;
+    gap: 24px;
+}
+
+.education-card {
+    display: grid;
+    gap: 12px;
+    padding: 20px;
+    border: 1px solid rgba(88, 163, 255, 0.35);
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.education-card,
+.education-card * {
+    box-sizing: border-box;
+}
+
+.education-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 16px;
+}
+
+.college-name {
+    color: #58a3ff;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.college-location,
+.education-meta {
+    color: darkgray;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.education-status {
+    min-height: 32px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: rgba(88, 163, 255, 0.14);
+    color: #0159c5;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.education-degree {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.education-meta,
+.education-gpa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+}
+
+.education-gpa span {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(88, 163, 255, 0.14);
+    color: #0159c5;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.education-gpa em {
+    margin-left: 8px;
+    color: #4f4f4f;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .education-card {
+        padding: 16px;
+    }
+
+    .education-header {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .college-name {
+        font-size: 22px;
+    }
+
+    .college-location,
+    .education-meta {
+        font-size: 16px;
+    }
+
+    .education-status {
+        justify-self: start;
+    }
+}
