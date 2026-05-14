@@ -7,6 +7,7 @@ import Skills from './pages/Skills';
 import WorkExperience from './pages/WorkExperience';
 import Projects from './pages/Projects';
 import Education from './pages/Education';
+import Reviews from './pages/Reviews';
 import Separator from './components/Separator';
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
         <Projects />
         <Separator />
         <Education />
-        {/* <Reviews />
-        <Certifications />
+        <Separator />
+        <Reviews />
+        {/* <Certifications />
         <Profiles /> */}
       </main>
     </div>

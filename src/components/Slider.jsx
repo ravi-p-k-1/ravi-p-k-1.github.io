@@ -1,22 +1,24 @@
 import React, { useMemo, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faChevronLeft, faChevronRight, faUser } from '@fortawesome/free-solid-svg-icons';
 
 const sliderImages = require.context('../assets/images/slider-images', false, /\.(png|jpe?g|svg|webp)$/);
 
 function getImageSrc(photo) {
-    if (!photo) {
+    const photoName = typeof photo === 'string' ? photo.trim() : '';
+
+    if (!photoName) {
         return '';
     }
 
-    if (/^(https?:|data:|\/)/.test(photo)) {
-        return photo;
+    if (/^(https?:|data:|\/)/.test(photoName)) {
+        return photoName;
     }
 
     try {
-        return sliderImages(`./${photo}`);
+        return sliderImages(`./${photoName}`);
     } catch {
-        return photo;
+        return '';
     }
 }
 
@@ -25,7 +27,8 @@ function normalizeSlide(item) {
     const name = item.name || item.title || 'Project';
     const description = Array.isArray(item.description)
         ? item.description.join(' ')
-        : item.description || '';
+        : item.description || item.review || '';
+    const meta = [item.position, item.relation].filter(Boolean).join(' | ');
     const links = Object.entries(item.links || {})
         .filter(([, url]) => Boolean(url))
         .map(([label, url]) => ({
@@ -39,13 +42,18 @@ function normalizeSlide(item) {
         name,
         description,
         links,
+        meta,
+        imageFit: item.imageFit,
+        imagePosition: item.imagePosition,
         alt: item.alt || name
     };
 }
 
-export default function Slider({ data = [] }) {
+export default function Slider({ data = [], showPlaceholder = false }) {
     const [sliderIndex, setSliderIndex] = useState(0);
-    const slides = useMemo(() => data.map(normalizeSlide).filter((item) => item.photo), [data]);
+    const slides = useMemo(() => {
+        return data.map(normalizeSlide).filter((item) => item.photo || showPlaceholder);
+    }, [data, showPlaceholder]);
 
     if (!slides.length) {
         return null;
@@ -73,10 +81,26 @@ export default function Slider({ data = [] }) {
                 {
                     slides.map((item, index) => {
                         return (
-                            <div className='slide' key={`${item.photo}-${index}`} aria-hidden={sliderIndex !== index}>
+                            <div className='slide' key={`${item.name}-${index}`} aria-hidden={sliderIndex !== index}>
                                 <div className='slide-header'>
-                                    <img src={item.photo} alt={item.alt} />
-                                    <h3>{item.name}</h3>
+                                    {item.photo ? (
+                                        <img
+                                            src={item.photo}
+                                            alt={item.alt}
+                                            style={{
+                                                objectFit: item.imageFit,
+                                                objectPosition: item.imagePosition
+                                            }}
+                                        />
+                                    ) : (
+                                        <div className='slide-image-placeholder' aria-label={`${item.name} profile placeholder`}>
+                                            <FontAwesomeIcon icon={faUser} />
+                                        </div>
+                                    )}
+                                    <div className='slide-title'>
+                                        <h3>{item.name}</h3>
+                                        {item.meta && <div className='slide-meta'>{item.meta}</div>}
+                                    </div>
                                 </div>
                                 <div className='slide-content'>
                                     {item.description && <p>{item.description}</p>}
