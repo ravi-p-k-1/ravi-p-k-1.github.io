@@ -17,13 +17,13 @@
 }
 
 .company-name {
-    font-size: 30px;
+    font-size: var(--section-subtitle-size);
     font-weight: bold;
     color: #58a3ff;
 }
 
 .company-location, .position-info {
-    font-size: 18px;
+    font-size: var(--meta-text-size);
     font-style: italic;
     color: darkgray;
 }
@@ -40,6 +40,6 @@
 .selected-projects h3 {
     margin: 0 0 12px;
     color: #58a3ff;
-    font-size: 24px;
+    font-size: var(--card-title-size);
     font-weight: 500;
 }

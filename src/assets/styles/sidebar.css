@@ -49,7 +49,7 @@
 
 .profile-name {
     color: #0159c5;
-    font-size: 40px;
+    font-size: var(--section-title-size);
     font-weight: 900;
     line-height: 1.05;
     overflow-wrap: anywhere;
@@ -177,7 +177,7 @@
     }
 
     .profile-name {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .profile-profession {

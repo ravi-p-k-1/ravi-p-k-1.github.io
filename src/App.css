@@ -1,6 +1,10 @@
 .App {
   display: flex;
   height: 100%;
+  --section-title-size: 38px;
+  --section-subtitle-size: 24px;
+  --card-title-size: 21px;
+  --meta-text-size: 18px;
 }
 
 main {
@@ -22,7 +26,7 @@ main .section:last-child {
 }
 
 .section-title {
-  font-size: 50px;
+  font-size: var(--section-title-size);
   font-weight: bold;
   margin-bottom: 20px;
   /* border-bottom: 1px solid #58a3ff; */
@@ -37,4 +41,11 @@ main .section:last-child {
   text-align: justify;
 }
 
-
+@media (max-width: 640px) {
+  .App {
+    --section-title-size: 32px;
+    --section-subtitle-size: 22px;
+    --card-title-size: 19px;
+    --meta-text-size: 16px;
+  }
+}

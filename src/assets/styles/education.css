@@ -29,7 +29,7 @@
 
 .college-name {
     color: #58a3ff;
-    font-size: 30px;
+    font-size: var(--section-subtitle-size);
     font-weight: bold;
     line-height: 1.2;
     overflow-wrap: anywhere;
@@ -38,7 +38,7 @@
 .college-location,
 .education-meta {
     color: darkgray;
-    font-size: 18px;
+    font-size: var(--meta-text-size);
     font-style: italic;
 }
 
@@ -94,12 +94,12 @@
     }
 
     .college-name {
-        font-size: 22px;
+        font-size: var(--section-subtitle-size);
     }
 
     .college-location,
     .education-meta {
-        font-size: 16px;
+        font-size: var(--meta-text-size);
     }
 
     .education-status {

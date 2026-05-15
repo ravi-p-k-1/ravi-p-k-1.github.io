@@ -9,7 +9,7 @@
 }
 
 .skills-section-title {
-  font-size: 28px;
+  font-size: var(--section-subtitle-size);
   font-weight: bold;
   margin-bottom: 14px;
   color: #58a3ff;
@@ -62,7 +62,6 @@
   }
 
   .skills-section-title {
-    font-size: 23px;
     margin-bottom: 12px;
   }
 
