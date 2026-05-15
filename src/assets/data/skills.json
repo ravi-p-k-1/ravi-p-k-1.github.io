@@ -124,6 +124,23 @@
             "familiarity": "High"
         }
     ],
+    "generativeAi": [
+        {
+            "name": "Codex CLI",
+            "familiarity": "High",
+            "customIcon": "codex"
+        },
+        {
+            "name": "GitHub Copilot",
+            "familiarity": "High",
+            "customIcon": "githubcopilot"
+        },
+        {
+            "name": "ChatGPT",
+            "familiarity": "High",
+            "icon": "openai"
+        }
+    ],
     "databases": [
         {
             "name": "PostgreSQL",
