@@ -62,9 +62,16 @@ export default function Sidebar() {
 
   return (
     <div className='sidebar'>
-      <div className='profile-image-container'>
-        <img className='profile-image' src={profileImg} alt=''/>
+      <div className='profile-header'>
+        <div className='profile-image-container'>
+          <img className='profile-image' src={profileImg} alt=''/>
+        </div>
+        <div className='profile-title'>
+          <div className='profile-name'>Ravi Kakadia</div>
+          <div className='profile-profession'>Full-Stack Developer</div>
+        </div>
       </div>
+      <div className='sidebar-separator'></div>
       <div className='sidebar-list' ref={navRef} onMouseLeave={hideHoverIndicator}>
         <span className="hover-indicator" style={indicatorStyle}></span>
         {
@@ -73,6 +80,7 @@ export default function Sidebar() {
           ))
         }
       </div>
+      <div className='sidebar-separator'></div>
       <div className='contact'>
         {
           profiles.map((profile) => (
