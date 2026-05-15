@@ -2,9 +2,31 @@ import { useRef, useState } from 'react'
 import SidebarListItem from '../components/SidebarListItem'
 import '../assets/styles/sidebar.css'
 import profileImg from '../assets/images/profile-photo.jpg'
+import profiles from '../assets/data/profiles.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faHackerrank, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
+const fontAwesomeIcons = {
+  github: faGithub,
+  hackerrank: faHackerrank,
+  linkedin: faLinkedin,
+  envelope: faEnvelope
+};
+
+function renderProfileIcon(profile) {
+  if (profile.icon.library === 'devicon') {
+    return <i className={`${profile.icon.className} sidebar-devicon`}></i>;
+  }
+
+  const icon = fontAwesomeIcons[profile.icon.name];
+
+  if (!icon) {
+    return null;
+  }
+
+  return <FontAwesomeIcon className='sidebar-icon' icon={icon} size='2x' color='#ffffff' />;
+}
 
 export default function Sidebar() {
 
@@ -16,7 +38,6 @@ export default function Sidebar() {
     { name: "Education", link: "#education" },
     { name: "Reviews", link: "#reviews" },
     { name: "Certifications", link: "#certifications" },
-    { name: "Profiles", link: "#profiles" },
   ];
 
   const navRef = useRef(null);
@@ -53,15 +74,20 @@ export default function Sidebar() {
         }
       </div>
       <div className='contact'>
-        <a href='https://github.com/ravi-p-k-1' target='_blank' rel='noreferrer'>
-          <FontAwesomeIcon className='sidebar-icon' icon={faGithub} size='2x' color='#ffffff' />
-        </a>
-        <a href='https://www.linkedin.com/in/r-kakadia/' target='_blank' rel='noreferrer'>
-          <FontAwesomeIcon className='sidebar-icon' icon={faLinkedin} size='2x' color='#ffffff' />
-        </a>
-        <a href='mailto:r_kakadia@u.pacific.edu'>
-          <FontAwesomeIcon className='sidebar-icon' icon={faEnvelope} size='2x' color='#ffffff' />
-        </a>
+        {
+          profiles.map((profile) => (
+            <a
+              key={profile.id}
+              href={profile.url}
+              target={profile.url.startsWith('mailto:') ? undefined : '_blank'}
+              rel={profile.url.startsWith('mailto:') ? undefined : 'noreferrer'}
+              aria-label={`${profile.name} profile`}
+              title={profile.name}
+            >
+              {renderProfileIcon(profile)}
+            </a>
+          ))
+        }
       </div>
     </div>
   )

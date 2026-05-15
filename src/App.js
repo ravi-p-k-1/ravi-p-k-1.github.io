@@ -29,7 +29,6 @@ function App() {
         <Reviews />
         <Separator />
         <Certifications />
-        {/* <Profiles /> */}
       </main>
     </div>
   );

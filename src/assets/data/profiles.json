@@ -1,0 +1,52 @@
+[
+    {
+        "id": "github",
+        "name": "GitHub",
+        "url": "https://github.com/ravi-p-k-1",
+        "icon": {
+            "library": "fontawesome",
+            "pack": "brands",
+            "name": "github"
+        }
+    },
+    {
+        "id": "linkedin",
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/r-kakadia/",
+        "icon": {
+            "library": "fontawesome",
+            "pack": "brands",
+            "name": "linkedin"
+        }
+    },
+    {
+        "id": "leetcode",
+        "name": "LeetCode",
+        "url": "https://leetcode.com/u/ravipkakadia1/",
+        "icon": {
+            "library": "devicon",
+            "className": "devicon-leetcode-plain"
+        }
+    },
+    {
+        "id": "hackerrank",
+        "name": "HackerRank",
+        "url": "https://www.hackerrank.com/profile/ravipkakadia1",
+        "icon": {
+            "library": "fontawesome",
+            "pack": "brands",
+            "name": "hackerrank"
+        }
+    },
+    {
+        "id": "email",
+        "name": "Email",
+        "url": "mailto:r_kakadia@u.pacific.edu",
+        "icon": {
+            "library": "fontawesome",
+            "pack": "solid",
+            "name": "envelope"
+        }
+    }
+]
+
