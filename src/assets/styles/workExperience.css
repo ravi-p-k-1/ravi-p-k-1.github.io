@@ -19,13 +19,13 @@
 .company-name {
     font-size: var(--section-subtitle-size);
     font-weight: bold;
-    color: #58a3ff;
+    color: var(--color-primary);
 }
 
 .company-location, .position-info {
     font-size: var(--meta-text-size);
     font-style: italic;
-    color: darkgray;
+    color: var(--color-muted);
 }
 
 .work-experience-description li {
@@ -41,7 +41,7 @@
 
 .selected-projects h3 {
     margin: 0 0 12px;
-    color: #58a3ff;
+    color: var(--color-primary);
     font-size: var(--card-title-size);
     font-weight: 500;
 }

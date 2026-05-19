@@ -12,7 +12,7 @@
   font-size: var(--section-subtitle-size);
   font-weight: bold;
   margin-bottom: 14px;
-  color: #58a3ff;
+  color: var(--color-primary);
 }
 
 .skills-list {
@@ -48,12 +48,12 @@
   height: 48px;
   font-size: 42px;
   line-height: 1;
-  color: #000000;
+  color: var(--color-text);
   transition: color 0.3s ease;
 }
 
 .skill-icons:hover {
-  color: #58a3ff;
+  color: var(--color-primary);
 }
 
 @media (max-width: 640px) {

@@ -2,8 +2,26 @@ html, body, #root {
   font-family: "Inter", sans-serif;
   margin: 0;
   min-height: 100%;
+  color: var(--color-text);
+}
+
+:root {
+  --color-primary: #2563eb;
+  --color-primary-light: #60a5fa;
+  --color-primary-dark: #1e3a8a;
+  --color-primary-rgb: 37, 99, 235;
+  --color-accent: #0f766e;
+  --color-accent-soft: #ccfbf1;
+  --color-text: #111827;
+  --color-muted: #6b7280;
+  --color-surface: #ffffff;
+  --color-page: #f8fafc;
+  --color-border: #dbeafe;
+  --color-border-strong: #bfdbfe;
+  --shadow-card: 0 10px 24px rgba(15, 23, 42, 0.08);
 }
 
 body {
   overflow-x: hidden;
+  background: var(--color-page);
 }

@@ -1,8 +1,8 @@
 /* Reviews */
 
 .reviews-section .slider-content {
-    background: #ffffff;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
 }
 
 .reviews-section .slide {
@@ -21,7 +21,7 @@
     width: 120px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    background: #f3f7fc;
+    background: var(--color-page);
 }
 
 .reviews-section .slide-header img {

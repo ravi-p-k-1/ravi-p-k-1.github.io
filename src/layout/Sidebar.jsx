@@ -25,7 +25,7 @@ function renderProfileIcon(profile) {
     return null;
   }
 
-  return <FontAwesomeIcon className='sidebar-icon' icon={icon} size='2x' color='#ffffff' />;
+  return <FontAwesomeIcon className='sidebar-icon' icon={icon} size='2x' />;
 }
 
 export default function Sidebar() {

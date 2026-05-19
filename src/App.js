@@ -2,13 +2,13 @@ import './App.css';
 import './assets/styles/components.css';
 import 'devicon/devicon.min.css';
 import Sidebar from './layout/Sidebar';
-import AboutMe from './pages/AboutMe';
-import Skills from './pages/Skills';
-import WorkExperience from './pages/WorkExperience';
-import Projects from './pages/Projects';
-import Education from './pages/Education';
-import Reviews from './pages/Reviews';
-import Certifications from './pages/Certifications';
+import AboutMe from './sections/AboutMe';
+import Skills from './sections/Skills';
+import WorkExperience from './sections/WorkExperience';
+import Projects from './sections/Projects';
+import Education from './sections/Education';
+import Reviews from './sections/Reviews';
+import Certifications from './sections/Certifications';
 import Separator from './components/Separator';
 
 function App() {
@@ -29,6 +29,9 @@ function App() {
         <Reviews />
         <Separator />
         <Certifications />
+        <footer className="site-footer">
+          &copy; {new Date().getFullYear()} Ravi Kakadia. All rights reserved.
+        </footer>
       </main>
     </div>
   );

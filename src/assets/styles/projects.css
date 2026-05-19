@@ -14,10 +14,10 @@
     height: 100%;
     min-height: 520px;
     padding: 20px;
-    border: 1px solid rgba(88, 163, 255, 0.35);
+    border: 1px solid var(--color-border-strong);
     border-radius: 8px;
-    background: #ffffff;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
 }
 
 .project-card,
@@ -43,7 +43,7 @@
 
 .project-card-header h3 {
     margin: 0;
-    color: #58a3ff;
+    color: var(--color-primary);
     font-size: var(--card-title-size);
     line-height: 1.25;
     overflow-wrap: anywhere;
@@ -51,7 +51,7 @@
 
 .project-meta {
     margin-top: 6px;
-    color: #666666;
+    color: var(--color-muted);
     font-size: 14px;
     font-style: italic;
 }
@@ -93,8 +93,8 @@
 .project-technologies span {
     padding: 6px 10px;
     border-radius: 6px;
-    background: rgba(88, 163, 255, 0.14);
-    color: #0159c5;
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
     font-size: 13px;
     font-weight: 700;
 }
@@ -105,17 +105,17 @@
     justify-content: center;
     min-height: 34px;
     padding: 6px 14px;
-    border: 1px solid #58a3ff;
+    border: 1px solid var(--color-primary-light);
     border-radius: 6px;
-    color: #0173ff;
+    color: var(--color-primary);
     font-size: 14px;
     font-weight: 700;
     text-decoration: none;
 }
 
 .project-links a:hover {
-    background: #58a3ff;
-    color: #ffffff;
+    background: var(--color-primary);
+    color: var(--color-surface);
 }
 
 @media (max-width: 820px) {

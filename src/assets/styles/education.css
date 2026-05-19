@@ -9,10 +9,10 @@
     display: grid;
     gap: 12px;
     padding: 20px;
-    border: 1px solid rgba(88, 163, 255, 0.35);
+    border: 1px solid var(--color-border-strong);
     border-radius: 8px;
-    background: #ffffff;
-    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
 }
 
 .education-card,
@@ -28,7 +28,7 @@
 }
 
 .college-name {
-    color: #58a3ff;
+    color: var(--color-primary);
     font-size: var(--section-subtitle-size);
     font-weight: bold;
     line-height: 1.2;
@@ -37,7 +37,7 @@
 
 .college-location,
 .education-meta {
-    color: darkgray;
+    color: var(--color-muted);
     font-size: var(--meta-text-size);
     font-style: italic;
 }
@@ -46,8 +46,8 @@
     min-height: 32px;
     padding: 6px 12px;
     border-radius: 6px;
-    background: rgba(88, 163, 255, 0.14);
-    color: #0159c5;
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
     font-size: 14px;
     font-weight: 700;
     white-space: nowrap;
@@ -69,15 +69,15 @@
 .education-gpa span {
     padding: 6px 10px;
     border-radius: 6px;
-    background: rgba(88, 163, 255, 0.14);
-    color: #0159c5;
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
     font-size: 14px;
     font-weight: 700;
 }
 
 .education-gpa em {
     margin-left: 8px;
-    color: #4f4f4f;
+    color: var(--color-muted);
     font-size: 13px;
     font-style: normal;
     font-weight: 600;

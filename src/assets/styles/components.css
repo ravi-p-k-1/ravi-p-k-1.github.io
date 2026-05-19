@@ -13,7 +13,7 @@
 
 .sidebar-list-item-link {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-surface);
     font-size: 18px;
     font-weight: 700;
     width: 100%;
@@ -41,11 +41,11 @@
 .line {
   flex: 1;
   height: 1px;
-  background-color: #58a3ff;
+  background-color: var(--color-border-strong);
 }
 
 .diamond {
-  color: #58a3ff;
+  color: var(--color-primary);
   font-size: 30px;
 }
 
@@ -118,9 +118,9 @@
 
 .slider-content {
   overflow: hidden;
-  border: 1px solid rgba(88, 163, 255, 0.35);
+  border: 1px solid var(--color-border-strong);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--color-surface);
 }
 
 .slider-track {
@@ -158,8 +158,8 @@
   width: 150px;
   aspect-ratio: 4 / 3;
   border-radius: 6px;
-  background: #f3f7fc;
-  color: #58a3ff;
+  background: var(--color-page);
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +168,7 @@
 
 .slide-header h3 {
   margin: 0;
-  color: #58a3ff;
+  color: var(--color-primary);
   font-size: var(--card-title-size);
   line-height: 1.25;
   overflow-wrap: anywhere;
@@ -180,7 +180,7 @@
 
 .slide-meta {
   margin-top: 6px;
-  color: #666666;
+  color: var(--color-muted);
   font-size: 15px;
   font-style: italic;
   line-height: 1.4;
@@ -207,27 +207,27 @@
   justify-content: center;
   min-height: 34px;
   padding: 6px 14px;
-  border: 1px solid #58a3ff;
+  border: 1px solid var(--color-primary-light);
   border-radius: 6px;
-  color: #0173ff;
+  color: var(--color-primary);
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
 }
 
 .slide-links a:hover {
-  background: #58a3ff;
-  color: #ffffff;
+  background: var(--color-primary);
+  color: var(--color-surface);
 }
 
 .slider-prev button,
 .slider-next button {
   width: 44px;
   height: 44px;
-  border: 1px solid rgba(88, 163, 255, 0.5);
+  border: 1px solid var(--color-border-strong);
   border-radius: 50%;
-  background: #ffffff;
-  color: #111111;
+  background: var(--color-surface);
+  color: var(--color-text);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -236,8 +236,8 @@
 
 .slider-prev button:hover,
 .slider-next button:hover {
-  background: #58a3ff;
-  color: #ffffff;
+  background: var(--color-primary);
+  color: var(--color-surface);
 }
 
 @media (max-width: 640px) {
