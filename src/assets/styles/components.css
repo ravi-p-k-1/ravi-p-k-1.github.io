@@ -45,8 +45,11 @@
 }
 
 .diamond {
-  color: var(--color-primary);
-  font-size: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-primary);
+  transform: rotate(45deg);
+  flex: 0 0 10px;
 }
 
 /* Slider */
