@@ -24,6 +24,8 @@
                     "website": "https://sjcdata.org/"
                 },
                 "image": "sjc.png",
+                "imageFit": "contain",
+                "imagePosition": "center top",
                 "description" : "SJC Data Compass is a regional data visualization platform designed to provide accessible, interactive, and data-driven insights for San Joaquin County. The platform transforms complex public datasets into user-friendly charts, dashboards, and downloadable reports covering areas such as employment, housing, education, public health, demographics, and economic development. It integrates data from public sources including FRED, BEA, and California state agencies into responsive visualizations, downloadable datasets, and interactive dashboards that support data-driven decision-making for policymakers, researchers, organizations, and community members."
             },
             {
@@ -36,6 +38,8 @@
                     "figma": "https://www.figma.com/design/xVRHdYDKTpEJwIOdFjXVFg/NSJV-Figma-design?node-id=0-1&t=wIjNdjs7FgQ0FIjc-1"
                 },
                 "image": "nsjv.png",
+                "imageFit": "contain",
+                "imagePosition": "center top",
                 "description" : "The North San Joaquin Valley (NSJV) Data Compass is an interactive regional analytics platform focused on combining and visualizing socioeconomic data across multiple counties within the North San Joaquin Valley region. The platform integrates public datasets from sources such as FRED, BEA, and California state agencies into scalable web-based visualizations, downloadable datasets, and interactive dashboards. It was designed to support regional planning, economic analysis, and public accessibility through reusable chart templates, dynamic filtering systems, high-performance data tables, and responsive user experiences."
             }
         ]

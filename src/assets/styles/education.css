@@ -84,6 +84,10 @@
 }
 
 @media (max-width: 640px) {
+    .education-list {
+        gap: 18px;
+    }
+
     .education-card {
         padding: 16px;
     }
@@ -104,5 +108,9 @@
 
     .education-status {
         justify-self: start;
+    }
+
+    .education-degree {
+        font-size: 18px;
     }
 }

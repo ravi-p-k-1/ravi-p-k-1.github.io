@@ -1,6 +1,6 @@
 .App {
   display: flex;
-  height: 100%;
+  min-height: 100vh;
   --section-title-size: 38px;
   --section-subtitle-size: 24px;
   --card-title-size: 21px;
@@ -9,6 +9,8 @@
 
 main {
   overflow: auto;
+  min-width: 0;
+  flex: 1;
 }
 
 /* Section */
@@ -34,11 +36,47 @@ main .section:last-child {
 }
 
 .section-content {
-  padding: 0px 20px
-;}
+  padding: 0px 20px;
+}
 
 .text-justified {
   text-align: justify;
+}
+
+@media (max-width: 1180px) {
+  .section {
+    padding: 44px 60px;
+  }
+
+  main .section:first-child {
+    padding-top: 90px;
+  }
+
+  main .section:last-child {
+    padding-bottom: 90px;
+  }
+}
+
+@media (max-width: 960px) {
+  .App {
+    display: block;
+  }
+
+  main {
+    overflow: visible;
+  }
+
+  .section {
+    padding: 40px 32px;
+  }
+
+  main .section:first-child {
+    padding-top: 48px;
+  }
+
+  main .section:last-child {
+    padding-bottom: 72px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -47,5 +85,29 @@ main .section:last-child {
     --section-subtitle-size: 22px;
     --card-title-size: 19px;
     --meta-text-size: 16px;
+  }
+
+  .section {
+    padding: 34px 18px;
+  }
+
+  main .section:first-child {
+    padding-top: 36px;
+  }
+
+  main .section:last-child {
+    padding-bottom: 56px;
+  }
+
+  .section-title {
+    margin-bottom: 16px;
+  }
+
+  .section-content {
+    padding: 0;
+  }
+
+  .text-justified {
+    text-align: left;
   }
 }

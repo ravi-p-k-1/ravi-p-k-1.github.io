@@ -44,12 +44,12 @@
     }
 
     .reviews-section .slide-header {
-        grid-template-columns: 82px minmax(0, 1fr);
+        grid-template-columns: 76px minmax(0, 1fr);
     }
 
     .reviews-section .slide-header img,
     .reviews-section .slide-image-placeholder {
-        width: 82px;
+        width: 76px;
     }
 
     .reviews-section .slide-image-placeholder {
@@ -58,5 +58,16 @@
 
     .reviews-section .slide-content p {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 420px) {
+    .reviews-section .slide-header {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-section .slide-header img,
+    .reviews-section .slide-image-placeholder {
+        width: 96px;
     }
 }

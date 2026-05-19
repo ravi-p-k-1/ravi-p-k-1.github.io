@@ -30,6 +30,8 @@
 
 .work-experience-description li {
     font-size: 18px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .selected-projects {
@@ -42,4 +44,24 @@
     color: #58a3ff;
     font-size: var(--card-title-size);
     font-weight: 500;
+}
+
+@media (max-width: 960px) {
+    .selected-projects {
+        padding: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .work-experience-section {
+        padding: 16px 0;
+    }
+
+    .work-experience-description ul {
+        padding-left: 20px;
+    }
+
+    .work-experience-description li {
+        font-size: 16px;
+    }
 }
