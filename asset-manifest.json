@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.29e93767.css",
-    "main.js": "/static/js/main.ecf9891c.js",
+    "main.css": "/static/css/main.968fb62d.css",
+    "main.js": "/static/js/main.4f802662.js",
     "static/js/453.e6449353.chunk.js": "/static/js/453.e6449353.chunk.js",
     "static/media/devicon.svg?qd25fp": "/static/media/devicon.10e33a3796c872bc312e.svg",
     "static/media/devicon.eot?qd25fp": "/static/media/devicon.bb0c9256aeb8aecf3ba6.eot",
     "static/media/devicon.woff?qd25fp": "/static/media/devicon.e4d86e063cb00ba23862.woff",
     "static/media/devicon.ttf?qd25fp": "/static/media/devicon.685a2d4fcee813854715.ttf",
     "static/media/releasetrain.jpg": "/static/media/releasetrain.47171daa20638686b690.jpg",
+    "static/media/insightiq.png": "/static/media/insightiq.39c90e40c84141ce9e10.png",
     "static/media/profile-photo.jpg": "/static/media/profile-photo.3599a733867192d8fbd5.jpg",
     "static/media/nsjv.png": "/static/media/nsjv.b9a2a2920413f571ebae.png",
     "static/media/sjc.png": "/static/media/sjc.032bf4be9130b1c10ff0.png",
@@ -18,12 +19,12 @@
     "static/media/githubcopilot.svg": "/static/media/githubcopilot.78c67b67b86a5922e3171dbf1fd014b2.svg",
     "static/media/codex.svg": "/static/media/codex.8911b503202ded09acfb3fdbcc543084.svg",
     "index.html": "/index.html",
-    "main.29e93767.css.map": "/static/css/main.29e93767.css.map",
-    "main.ecf9891c.js.map": "/static/js/main.ecf9891c.js.map",
+    "main.968fb62d.css.map": "/static/css/main.968fb62d.css.map",
+    "main.4f802662.js.map": "/static/js/main.4f802662.js.map",
     "453.e6449353.chunk.js.map": "/static/js/453.e6449353.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.29e93767.css",
-    "static/js/main.ecf9891c.js"
+    "static/css/main.968fb62d.css",
+    "static/js/main.4f802662.js"
   ]
 }
