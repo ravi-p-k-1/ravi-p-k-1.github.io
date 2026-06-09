@@ -1,5 +1,20 @@
 [
     {
+        "name": "InsightIQ",
+        "technologies": ["React", "Express", "Gemini API", "FRED API", "Codex"],
+        "contribution": "Built from Scratch",
+        "progress": "Completed",
+        "description": [
+            "Built a full-stack AI-powered economic insights dashboard that converts natural-language questions into up to 4 chart-ready economic data visualizations per query using Gemini and FRED APIs, complete with AI-generated explanations.",
+            "Developed a React dashboard with Recharts visualizations, client-side routing, and local query-history caching for the 10 most recent queries, reducing repeated API requests and enabling users to revisit previously generated insights.",
+            "Designed an Express backend workflow that uses Gemini to identify relevant FRED series, retrieve annual observations and metadata, validate series IDs, and generate per-series economic explanations."
+        ],
+        "image": "insightiq.png",
+        "links": {
+            "github": "https://github.com/ravi-p-k-1/InsightIQ"
+        }
+    },
+    {
         "name": "Releasetrain.io",
         "technologies": ["Python", "TensorFlow", "NLP"],
         "contribution": "Built from Scratch",
