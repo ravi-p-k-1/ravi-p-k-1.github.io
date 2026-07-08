@@ -41,11 +41,12 @@
 }
 
 .skill-icons {
+  --skill-icon-size: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: var(--skill-icon-size);
+  height: var(--skill-icon-size);
   font-size: 42px;
   line-height: 1;
   color: var(--color-text);
@@ -57,12 +58,17 @@
 }
 
 .skill-icon-fallback {
+  box-sizing: border-box;
+  max-width: 100%;
   border: 1px solid var(--color-border-strong);
   border-radius: 8px;
   background: var(--color-surface);
   color: var(--color-primary);
-  font-size: 15px;
+  font-size: min(15px, calc(var(--skill-icon-size) * 0.31));
   font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .skill-icon-fallback:hover {
@@ -91,12 +97,33 @@
   }
 
   .skill-icons {
-    width: 42px;
-    height: 42px;
+    --skill-icon-size: 42px;
     font-size: 36px;
+  }
+
+  .skill-icon-fallback {
+    font-size: min(13px, calc(var(--skill-icon-size) * 0.3));
   }
 
   .skill-name {
     font-size: 13px;
+  }
+}
+
+@media (max-width: 380px) {
+  .skills-list {
+    gap: 12px 10px;
+  }
+
+  .skill-container {
+    width: 68px;
+  }
+
+  .skill-icons {
+    --skill-icon-size: 38px;
+  }
+
+  .skill-icon-fallback {
+    font-size: min(12px, calc(var(--skill-icon-size) * 0.3));
   }
 }
