@@ -1,13 +1,14 @@
 [
     {
         "name": "InsightIQ",
-        "technologies": ["React", "Express", "Gemini API", "FRED API", "Codex"],
+        "technologies": ["React", "Express", "PostgreSQL", "pgvector", "Xenova", "Gemini API", "FRED API"],
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Built a full-stack AI-powered economic insights dashboard that converts natural-language questions into up to 4 chart-ready economic data visualizations per query using Gemini and FRED APIs, complete with AI-generated explanations.",
-            "Developed a React dashboard with Recharts visualizations, client-side routing, and local query-history caching for the 10 most recent queries, reducing repeated API requests and enabling users to revisit previously generated insights.",
-            "Designed an Express backend workflow that uses Gemini to identify relevant FRED series, retrieve annual observations and metadata, validate series IDs, and generate per-series economic explanations."
+            "Built a full-stack AI-powered economic insights platform that transforms natural-language questions into interactive FRED visualizations using React, Express, semantic retrieval, and Gemini-generated analysis.",
+            "Developed a Retrieval-Augmented Generation (RAG) pipeline using PostgreSQL, pgvector, local Xenova embeddings, and FRED metadata/tags to retrieve relevant economic indicators while reducing hallucinated or invalid LLM-selected series IDs.",
+            "Created an offline indexing workflow that synchronized over 200K national and state-level FRED series, enriched selected series with official metadata and tags, generated vector embeddings, and indexed them for semantic search.",
+            "Designed an Express.js orchestration layer that performs vector retrieval, validates annual FRED observations, and orchestrates Gemini to generate grounded chart-level insights and dashboard summaries."
         ],
         "image": "insightiq.png",
         "links": {

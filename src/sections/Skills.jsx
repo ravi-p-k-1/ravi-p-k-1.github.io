@@ -15,6 +15,17 @@ const customSkillIcons = {
 };
 
 function SkillIcon({ skill }) {
+  if (skill.isDeviconAvailable === false) {
+    const initials = skill.initials || skill.name
+      .split(/\s+|-/)
+      .filter(Boolean)
+      .slice(0, 2)
+      .map((word) => word.charAt(0).toUpperCase())
+      .join('');
+
+    return <span className='skill-icons skill-icon-fallback' aria-hidden='true'>{initials}</span>;
+  }
+
   if (skill.customIcon && customSkillIcons[skill.customIcon]) {
     const CustomIcon = customSkillIcons[skill.customIcon];
     return <CustomIcon className='skill-icons' aria-hidden='true' focusable='false' />;
@@ -38,7 +49,7 @@ export default function Skills() {
           <div className='skills-section-title'>Languages</div>
           <div className='skills-list'>
             {
-              skills.languages.filter(skill => skill.isDeviconAvailable!==false).map((skill, index) => {
+              skills.languages.map((skill, index) => {
                 return (
                   <div key={index} className='skill-container'>
                     <SkillIcon skill={skill} />
@@ -53,7 +64,7 @@ export default function Skills() {
           <div className='skills-section-title'>Frameworks</div>
           <div className='skills-list'>
             {
-              skills.frameworks.filter(skill => skill.isDeviconAvailable!==false).map((skill, index) => {
+              skills.frameworks.map((skill, index) => {
                 return (
                   <div key={index} className='skill-container'>
                     <SkillIcon skill={skill} />
@@ -68,7 +79,7 @@ export default function Skills() {
           <div className='skills-section-title'>Libraries</div>
           <div className='skills-list'>
             {
-              skills.libraries.filter(skill => skill.isDeviconAvailable!==false).map((skill, index) => {
+              skills.libraries.map((skill, index) => {
                 return (
                   <div key={index} className='skill-container'>
                     <SkillIcon skill={skill} />
@@ -83,7 +94,7 @@ export default function Skills() {
           <div className='skills-section-title'>Tools and DevOps</div>
           <div className='skills-list'>
             {
-              skills.toolsAndDevOps.filter(skill => skill.isDeviconAvailable!==false).map((skill, index) => {
+              skills.toolsAndDevOps.map((skill, index) => {
                 return (
                   <div key={index} className='skill-container'>
                     <SkillIcon skill={skill} />
@@ -113,7 +124,7 @@ export default function Skills() {
           <div className='skills-section-title'>Databases</div>
           <div className='skills-list'>
             {
-              skills.databases.filter(skill => skill.isDeviconAvailable!==false).map((skill, index) => {
+              skills.databases.map((skill, index) => {
                 return (
                   <div key={index} className='skill-container'>
                     <SkillIcon skill={skill} />
@@ -128,7 +139,7 @@ export default function Skills() {
           <div className='skills-section-title'>CMS</div>
           <div className='skills-list'>
             {
-              skills.cmsAndApi.filter(skill => skill.isDeviconAvailable!==false).map((skill, index) => {
+              skills.cmsAndApi.map((skill, index) => {
                 return (
                   <div key={index} className='skill-container'>
                     <SkillIcon skill={skill} />

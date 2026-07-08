@@ -75,6 +75,12 @@
             "familiarity": "High"
         },
         {
+            "name": "Xenova Transformers",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "XT"
+        },
+        {
             "name": "Bootstrap",
             "familiarity": "High"
         },
@@ -139,6 +145,24 @@
             "name": "ChatGPT",
             "familiarity": "High",
             "icon": "openai"
+        },
+        {
+            "name": "Retrieval-Augmented Generation (RAG)",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "RAG"
+        },
+        {
+            "name": "Prompt Engineering",
+            "familiarity": "High",
+            "isDeviconAvailable": false,
+            "initials": "PE"
+        },
+        {
+            "name": "Semantic Search",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "SS"
         }
     ],
     "databases": [
@@ -153,6 +177,12 @@
         {
             "name": "MySQL",
             "familiarity": "High"
+        },
+        {
+            "name": "pgvector",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "PG"
         }
     ],
     "cmsAndApi": [
