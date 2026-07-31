@@ -5,10 +5,10 @@
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Built a full-stack AI-powered economic insights platform that transforms natural-language questions into interactive FRED visualizations using React, Express, semantic retrieval, and Gemini-generated analysis.",
-            "Developed a Retrieval-Augmented Generation (RAG) pipeline using PostgreSQL, pgvector, local Xenova embeddings, and FRED metadata/tags to retrieve relevant economic indicators while reducing hallucinated or invalid LLM-selected series IDs.",
-            "Created an offline indexing workflow that synchronized over 200K national and state-level FRED series, enriched selected series with official metadata and tags, generated vector embeddings, and indexed them for semantic search.",
-            "Designed an Express.js orchestration layer that performs vector retrieval, validates annual FRED observations, and orchestrates Gemini to generate grounded chart-level insights and dashboard summaries."
+            "Engineered a full-stack economic research platform that converts natural-language questions into validated FRED datasets, interactive visualizations, and grounded AI-generated analysis.",
+            "Implemented semantic retrieval across 200K+ FRED series using PostgreSQL, pgvector, and local Xenova embeddings, preventing unvalidated series IDs from reaching generated insights.",
+            "Built offline indexing and Express.js orchestration workflows for metadata enrichment, embedding generation, vector retrieval, observation validation, and Gemini-powered analysis.",
+            "Added structured error handling, partial-failure fallbacks, Docker-based setup, GitHub Actions CI, and retrieval evaluation using 35 benchmark economic questions."
         ],
         "image": "insightiq.png",
         "links": {
@@ -21,9 +21,10 @@
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Developed an ML/NLP pipeline for automated risk detection from unstructured data, including preprocessing and TF-IDF feature engineering.",
-            "Defined labeling guidelines and annotated 4,000+ samples, improving data quality and reducing bias.",
-            "Achieved 97% accuracy and 67% F1-score through hyperparameter tuning, improving model performance and reliability."
+            "Developed an NLP pipeline for ReleaseTrain.io that transformed 4,000+ labeled Reddit posts into structured signals for identifying software-release and update-related discussions.",
+            "Trained and evaluated TF-IDF-based logistic regression and SVM classifiers using stratified validation and minority-class oversampling to address imbalanced community data.",
+            "Built a reusable inference workflow that cleans incoming posts and enriches JSON records with predicted labels, confidence scores, and timestamps.",
+            "Integrated the classification results into ReleaseTrain.io's broader software-release and security-analysis workflow."
         ],
         "image": "releasetrain.jpg",
         "links": {
@@ -36,8 +37,10 @@
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Built a real-time dashboard for an IoT-based smart watering system, enabling live sensor monitoring and automated 15-minute status updates.",
-            "Led a 4-member team in designing the frontend architecture and containerizing the application with Docker for streamlined deployment."
+            "Owned React and TypeScript frontend development on a four-person IoT team, building responsive dashboards, authentication, plant-management workflows, sensor-history views, and reusable components.",
+            "Integrated JWT-secured FastAPI endpoints through shared Axios services and implemented automatic refresh, loading, and error states for monitoring current and historical moisture readings.",
+            "Collaborated across a Raspberry Pi, FastAPI, PostgreSQL, Docker, and Azure stack to support four sensors, 60-second sampling, weather enrichment, offline SQLite storage, and batched synchronization.",
+            "Maintained ESLint and Azure Pipelines CI workflows, resolved integration issues, and supported consistent Docker- and Nginx-based deployments."
         ],
         "image": "sproutly.jpg",
         "links": {
@@ -54,9 +57,10 @@
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Built a reinforcement learning–based V2X simulation for emergency vehicle routing in urban traffic to optimize response time and routing efficiency in critical scenarios.",
-            "Reduced emergency response time by ~4.8%, improving routing efficiency across training episodes.",
-            "Achieved ~8% lower latency vs rule-based approaches, improving efficiency and responsiveness in vehicle communication systems."
+            "Built a SUMO and TraCI traffic-control system that detects approaching emergency vehicles and uses real-time vehicle, lane, speed, and detector data to coordinate lane clearance and signal priority.",
+            "Implemented detector-triggered intersection control that dynamically switches traffic-light phases and directs surrounding vehicles away from an emergency vehicle's route.",
+            "Developed a reinforcement-learning agent that evaluates nearby traffic, lane availability, and intersection distance to select maintain-lane, left-lane, or right-lane actions.",
+            "Standardized simulation runners and configuration using repository-relative paths and environment variables, enabling reproducible experiments across different machines."
         ],
         "image": "esvpiov.png",
         "links": {
@@ -64,4 +68,3 @@
         }
     }
 ]
-
