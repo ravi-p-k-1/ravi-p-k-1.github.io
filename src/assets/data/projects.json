@@ -49,7 +49,7 @@
         }
     },
     {
-        "name": "Emergency Service Provisioning for IOV",
+        "name": "Emergency Traffic Priority System",
         "technologies": ["Python", "SUMO", "Traci"],
         "contribution": "Built from Scratch",
         "progress": "Completed",
@@ -60,7 +60,7 @@
         ],
         "image": "esvpiov.png",
         "links": {
-            "github": "https://github.com/ravi-p-k-1/Emergency-service-provisioning-for-internet-of-vehicles-college-project"
+            "github": "https://github.com/ravi-p-k-1/Emergency-Traffic-Priority-System"
         }
     }
 ]
