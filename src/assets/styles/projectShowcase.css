@@ -109,10 +109,10 @@
 }
 
 .showcase-content {
-  height: 440px;
+  height: 460px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 18px;
   padding: 44px;
   min-width: 0;
