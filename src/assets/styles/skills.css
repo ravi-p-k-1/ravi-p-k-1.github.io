@@ -41,6 +41,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  max-width: 100%;
   padding: 10px 16px 10px 10px;
   border-radius: 999px;
   border: 1px solid var(--border);
@@ -110,5 +111,6 @@
 
   .skill-name {
     font-size: 13px;
+    white-space: normal;
   }
 }

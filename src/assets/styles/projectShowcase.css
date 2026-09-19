@@ -255,7 +255,8 @@
 .showcase-tab-name {
   font-size: 13px;
   font-weight: 600;
-  white-space: nowrap;
+  max-width: 220px;
+  overflow-wrap: anywhere;
 }
 
 /* Compact variant, for nesting inside a smaller card (e.g. a work
