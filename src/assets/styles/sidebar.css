@@ -13,7 +13,6 @@
   background: rgba(8, 11, 20, 0.7);
   backdrop-filter: blur(16px);
   border-right: 1px solid var(--border);
-  overflow-y: auto;
   z-index: 50;
 }
 
@@ -141,7 +140,10 @@
 
 /* Shrink the rail on short viewports (a resized browser window, a
    laptop with limited vertical space, dev tools open) so all nav
-   icons and socials fit without relying on the overflow-y fallback.
+   icons and socials fit. No overflow-y fallback here on purpose: it
+   would force overflow-x to auto too (a CSS quirk - setting one axis
+   to non-visible converts the other away from visible), clipping the
+   tooltip that intentionally spills out past the rail's width.
    The rail needs ~680px unshrunk; keep this threshold well below that
    so ordinary browser-chrome height differences (Chrome vs. Edge vs.
    Firefox toolbars) don't flip the layout on otherwise-identical
