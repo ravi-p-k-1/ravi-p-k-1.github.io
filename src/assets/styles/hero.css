@@ -26,6 +26,14 @@
   pointer-events: none;
 }
 
+/* Keep real content painted above the decorative badge layer, since an
+   absolutely positioned sibling otherwise renders on top of static ones
+   regardless of DOM order. */
+.hero-inner > *:not(.hero-badges) {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-badge {
   position: absolute;
   padding: 7px 14px;

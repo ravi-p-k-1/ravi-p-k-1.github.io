@@ -12,13 +12,15 @@ const roles = [
   'data-driven platforms'
 ];
 
+// Kept close to the outer edges (left <10% or >80%) so they stay clear
+// of the centered text column and CTA buttons at every viewport width.
 const floatingBadges = [
-  { label: 'React', style: { top: '6%', left: '4%' } },
-  { label: 'TypeScript', style: { top: '18%', left: '78%' } },
-  { label: 'Node.js', style: { top: '58%', left: '2%' } },
-  { label: 'PostgreSQL', style: { top: '78%', left: '70%' } },
-  { label: 'Claude Agent SDK', style: { top: '2%', left: '46%' } },
-  { label: 'MCP', style: { top: '86%', left: '30%' } }
+  { label: 'React', style: { top: '8%', left: '6%' } },
+  { label: 'Claude Agent SDK', style: { top: '4%', left: '84%' } },
+  { label: 'Node.js', style: { top: '42%', left: '3%' } },
+  { label: 'TypeScript', style: { top: '38%', left: '90%' } },
+  { label: 'MCP', style: { top: '78%', left: '8%' } },
+  { label: 'PostgreSQL', style: { top: '82%', left: '86%' } }
 ];
 
 function useTypedRoles(words, prefersReducedMotion) {
