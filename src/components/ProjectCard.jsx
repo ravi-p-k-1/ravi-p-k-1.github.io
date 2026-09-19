@@ -1,4 +1,23 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLinkAlt, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faDribbble, faFigma, faGithub, faNpm } from '@fortawesome/free-brands-svg-icons';
+import ScrollReveal from './ScrollReveal';
+
 const projectImages = require.context('../assets/images/project-images', false, /\.(png|jpe?g|svg|webp)$/);
+
+const linkIcons = {
+  github: faGithub,
+  npm: faNpm,
+  figma: faFigma,
+  prototype: faFigma,
+  dribbble: faDribbble,
+  website: faGlobe
+};
+
+function getLinkIcon(label) {
+  const key = label.toLowerCase().split(/\s+/).pop();
+  return linkIcons[key] || faExternalLinkAlt;
+}
 
 function getProjectImage(image) {
   if (!image) {
@@ -35,23 +54,28 @@ function getProjectLinks(links = {}, prefix = '') {
   });
 }
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, index = 0 }) {
   const image = getProjectImage(project.image);
   const links = getProjectLinks(project.links);
+  const isCompleted = project.progress === 'Completed';
 
   return (
-    <article className='project-card'>
-      <div className='project-card-header'>
-        {image && <img src={image} alt={project.name} />}
-        <div>
+    <ScrollReveal as='article' className='project-card' delay={Math.min(index * 0.08, 0.32)}>
+      {image && (
+        <div className='project-card-media'>
+          <img src={image} alt={project.name} />
+        </div>
+      )}
+      <div className='project-card-body'>
+        <div className='project-card-top'>
           <h3>{project.name}</h3>
           <div className='project-meta'>
-            {project.contribution} | {project.progress}
+            <span>{project.contribution}</span>
+            <span className='project-meta-sep'>&middot;</span>
+            <span className={`project-progress ${isCompleted ? 'is-done' : ''}`}>{project.progress}</span>
           </div>
         </div>
-      </div>
-      <div className='project-card-content'>
-        <ul>
+        <ul className='project-description'>
           {
             project.description.map((point, pointIndex) => (
               <li key={pointIndex}>{point}</li>
@@ -71,6 +95,7 @@ export default function ProjectCard({ project }) {
               {
                 links.map((link) => (
                   <a key={link.url} href={link.url} target='_blank' rel='noreferrer'>
+                    <FontAwesomeIcon icon={getLinkIcon(link.label)} />
                     {link.label}
                   </a>
                 ))
@@ -79,6 +104,6 @@ export default function ProjectCard({ project }) {
           )
         }
       </div>
-    </article>
+    </ScrollReveal>
   )
 }

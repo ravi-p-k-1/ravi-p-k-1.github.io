@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { faHackerrank } from '@fortawesome/free-brands-svg-icons';
+import ScrollReveal from './ScrollReveal';
 
 function parseDate(dateValue) {
   const [year, month, day] = dateValue.split('-').map(Number);
@@ -49,12 +50,12 @@ function getCertificationIcon(certification) {
   };
 }
 
-export default function CertificationCard({ certification }) {
+export default function CertificationCard({ certification, index = 0 }) {
   const icon = getCertificationIcon(certification);
   const certificateUrl = certification.links?.certificate;
 
   return (
-    <article className='certification-card'>
+    <ScrollReveal as='article' className='certification-card' delay={Math.min(index * 0.06, 0.3)}>
       <div className='certification-icon' aria-label={icon.label} title={icon.label}>
         {
           icon.type === 'devicon'
@@ -86,6 +87,6 @@ export default function CertificationCard({ certification }) {
           )
         }
       </div>
-    </article>
+    </ScrollReveal>
   )
 }

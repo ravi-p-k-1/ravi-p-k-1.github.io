@@ -1,67 +1,167 @@
-/* Work Experience */
+/* Work Experience timeline */
 
-.work-experience-section {
-    display: flex;
-    flex-direction: column;
-    padding: 20px 0px;
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-.work-experience-header {
-    display: flex;
-    flex-direction: column;
+.timeline-line {
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 7px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 60%, transparent 100%);
+  opacity: 0.45;
 }
 
-.company-info {
-    display: flex;
-    flex-direction: column;
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 16px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
 }
 
-.company-name {
-    font-size: var(--section-subtitle-size);
-    font-weight: bold;
-    color: var(--color-primary);
+.timeline-dot {
+  grid-column: 1;
+  width: 16px;
+  height: 16px;
+  margin-top: 8px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 16px rgba(var(--accent-rgb), 0.45);
+  z-index: 1;
 }
 
-.company-location, .position-info {
-    font-size: var(--meta-text-size);
-    font-style: italic;
-    color: var(--color-muted);
+.timeline-dot.is-current {
+  background: var(--accent);
+  animation: pulse-dot 2.2s ease-out infinite;
 }
 
-.work-experience-description li {
-    font-size: 18px;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
+.timeline-content {
+  grid-column: 2;
+  min-width: 0;
+  padding: 26px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: rgba(var(--accent-rgb), 0.32);
+  box-shadow: var(--shadow-card);
+}
+
+.timeline-date {
+  display: inline-flex;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  margin-bottom: 14px;
+}
+
+.timeline-date.is-current {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.timeline-position {
+  font-size: var(--card-title-size);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.timeline-company {
+  margin-top: 6px;
+  color: var(--text-muted);
+  font-size: var(--meta-text-size);
+}
+
+.timeline-dot-sep {
+  color: var(--text-dim);
+}
+
+.timeline-description {
+  margin: 18px 0 0;
+  padding-left: 20px;
+}
+
+.timeline-description li {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 10px;
+  overflow-wrap: anywhere;
+}
+
+.timeline-description li::marker {
+  color: var(--accent);
+}
+
+.timeline-description li:last-child {
+  margin-bottom: 0;
 }
 
 .selected-projects {
-    margin-top: 20px;
-    padding: 0px 20px;
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
 }
 
-.selected-projects h3 {
-    margin: 0 0 12px;
-    color: var(--color-primary);
-    font-size: var(--card-title-size);
-    font-weight: 500;
+.selected-projects h4 {
+  margin: 0 0 14px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
-@media (max-width: 960px) {
-    .selected-projects {
-        padding: 0;
-    }
+@keyframes pulse-dot {
+  0% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 0 rgba(var(--accent-rgb), 0.55); }
+  70% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 10px rgba(var(--accent-rgb), 0); }
+  100% { box-shadow: 0 0 0 4px var(--bg), 0 0 0 0 rgba(var(--accent-rgb), 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-dot.is-current {
+    animation: none;
+  }
 }
 
 @media (max-width: 640px) {
-    .work-experience-section {
-        padding: 16px 0;
-    }
+  .timeline-content {
+    padding: 20px;
+  }
 
-    .work-experience-description ul {
-        padding-left: 20px;
-    }
+  .timeline-item {
+    grid-template-columns: 12px minmax(0, 1fr);
+    gap: 16px;
+  }
 
-    .work-experience-description li {
-        font-size: 16px;
-    }
+  .timeline-line {
+    left: 5px;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .timeline-description {
+    padding-left: 18px;
+  }
+
+  .timeline-description li {
+    font-size: 14px;
+  }
 }

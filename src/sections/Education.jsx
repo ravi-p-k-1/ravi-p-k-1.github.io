@@ -1,4 +1,6 @@
 import educationData from '../assets/data/education.json';
+import SectionHeading from '../components/SectionHeading';
+import ScrollReveal from '../components/ScrollReveal';
 import '../assets/styles/education.css';
 
 export default function Education() {
@@ -16,9 +18,7 @@ export default function Education() {
 
   return (
     <div className='section' id='education'>
-      <div className='section-title'>
-        Education
-      </div>
+      <SectionHeading index='05' title='Education' />
       <div className='section-content'>
         <div className='education-list'>
           {
@@ -27,7 +27,12 @@ export default function Education() {
               const endDate = formatDate(education.endDate);
 
               return (
-                <div key={`${education.college}-${index}`} className='education-card'>
+                <ScrollReveal
+                  as='div'
+                  key={`${education.college}-${index}`}
+                  className='education-card'
+                  delay={Math.min(index * 0.08, 0.24)}
+                >
                   <div className='education-header'>
                     <div>
                       <div className='college-name'>{education.college}</div>
@@ -54,7 +59,7 @@ export default function Education() {
                       )}
                     </div>
                   )}
-                </div>
+                </ScrollReveal>
               )
             })
           }

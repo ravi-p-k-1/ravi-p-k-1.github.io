@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faOpenai } from '@fortawesome/free-brands-svg-icons';
 import { ReactComponent as CodexIcon } from '../assets/custom-icons/codex.svg';
 import { ReactComponent as GithubCopilotIcon } from '../assets/custom-icons/githubcopilot.svg';
+import SectionHeading from '../components/SectionHeading';
+import ScrollReveal from '../components/ScrollReveal';
 
 const skillIcons = {
   openai: faOpenai
@@ -13,6 +15,17 @@ const customSkillIcons = {
   codex: CodexIcon,
   githubcopilot: GithubCopilotIcon
 };
+
+const categories = [
+  { title: 'Languages', key: 'languages' },
+  { title: 'Frameworks', key: 'frameworks' },
+  { title: 'Libraries', key: 'libraries' },
+  { title: 'Tools and DevOps', key: 'toolsAndDevOps' },
+  { title: 'Generative AI', key: 'generativeAi' },
+  { title: 'Databases', key: 'databases' },
+  { title: 'CMS and APIs', key: 'cmsAndApi' },
+  { title: 'Agile Methodologies', key: 'agileMethodologies', forceFallback: true }
+];
 
 function SkillIcon({ skill }) {
   if (skill.isDeviconAvailable === false) {
@@ -41,115 +54,49 @@ function SkillIcon({ skill }) {
 export default function Skills() {
   return (
     <div className='section' id='skills'>
-      <div className='section-title'>
-        Skills
-      </div>
+      <SectionHeading index='02' title='Skills' />
       <div className='section-content'>
-        <div className='skills-section'>
-          <div className='skills-section-title'>Languages</div>
-          <div className='skills-list'>
-            {
-              skills.languages.map((skill, index) => {
-                return (
-                  <div key={index} className='skill-container'>
-                    <SkillIcon skill={skill} />
-                    <div className='skill-name'>{skill.name}</div>
-                  </div>
-                )
-              })
+        {
+          categories.map((category, categoryIndex) => {
+            const items = skills[category.key];
+
+            if (!items || !items.length) {
+              return null;
             }
-          </div>
-        </div>
-        <div className='skills-section'>
-          <div className='skills-section-title'>Frameworks</div>
-          <div className='skills-list'>
-            {
-              skills.frameworks.map((skill, index) => {
-                return (
-                  <div key={index} className='skill-container'>
-                    <SkillIcon skill={skill} />
-                    <div className='skill-name'>{skill.name}</div>
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
-        <div className='skills-section'>
-          <div className='skills-section-title'>Libraries</div>
-          <div className='skills-list'>
-            {
-              skills.libraries.map((skill, index) => {
-                return (
-                  <div key={index} className='skill-container'>
-                    <SkillIcon skill={skill} />
-                    <div className='skill-name'>{skill.name}</div>
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
-        <div className='skills-section'>
-          <div className='skills-section-title'>Tools and DevOps</div>
-          <div className='skills-list'>
-            {
-              skills.toolsAndDevOps.map((skill, index) => {
-                return (
-                  <div key={index} className='skill-container'>
-                    <SkillIcon skill={skill} />
-                    <div className='skill-name'>{skill.name}</div>
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
-        <div className='skills-section'>
-          <div className='skills-section-title'>Generative AI</div>
-          <div className='skills-list'>
-            {
-              skills.generativeAi.map((skill, index) => {
-                return (
-                  <div key={index} className='skill-container'>
-                    <SkillIcon skill={skill} />
-                    <div className='skill-name'>{skill.name}</div>
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
-        <div className='skills-section'>
-          <div className='skills-section-title'>Databases</div>
-          <div className='skills-list'>
-            {
-              skills.databases.map((skill, index) => {
-                return (
-                  <div key={index} className='skill-container'>
-                    <SkillIcon skill={skill} />
-                    <div className='skill-name'>{skill.name}</div>
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
-        <div className='skills-section'>
-          <div className='skills-section-title'>CMS</div>
-          <div className='skills-list'>
-            {
-              skills.cmsAndApi.map((skill, index) => {
-                return (
-                  <div key={index} className='skill-container'>
-                    <SkillIcon skill={skill} />
-                    <div className='skill-name'>{skill.name}</div>
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
+
+            return (
+              <ScrollReveal
+                as='div'
+                key={category.key}
+                className='skills-section'
+                delay={Math.min(categoryIndex * 0.05, 0.3)}
+                y={18}
+              >
+                <div className='skills-section-title'>{category.title}</div>
+                <div className='skills-list'>
+                  {
+                    items.map((skill, index) => {
+                      const resolvedSkill = category.forceFallback && skill.isDeviconAvailable === undefined
+                        ? { ...skill, isDeviconAvailable: false }
+                        : skill;
+
+                      return (
+                        <div
+                          key={skill.name}
+                          className='skill-container'
+                          style={{ transitionDelay: `${Math.min(index * 25, 250)}ms` }}
+                        >
+                          <SkillIcon skill={resolvedSkill} />
+                          <div className='skill-name'>{skill.name}</div>
+                        </div>
+                      );
+                    })
+                  }
+                </div>
+              </ScrollReveal>
+            );
+          })
+        }
       </div>
     </div>
   )

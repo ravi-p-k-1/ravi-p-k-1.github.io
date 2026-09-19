@@ -1,147 +1,130 @@
 /* Certifications */
 
 .certifications-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .certification-card {
-    display: grid;
-    grid-template-columns: 78px minmax(0, 1fr);
-    gap: 18px;
-    align-items: center;
-    min-height: 180px;
-    padding: 20px;
-    border: 1px solid var(--color-border-strong);
-    border-radius: 8px;
-    background: var(--color-surface);
-    box-shadow: var(--shadow-card);
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.certification-card,
-.certification-card * {
-    box-sizing: border-box;
+.certification-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--accent-rgb), 0.35);
+  box-shadow: var(--shadow-glow);
 }
 
 .certification-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 78px;
-    aspect-ratio: 1;
-    border-radius: 8px;
-    background: var(--color-page);
-    color: var(--color-text);
-    font-size: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--surface-strong);
+  color: var(--accent);
+  font-size: 30px;
 }
 
 .certification-icon .devicon-amazonwebservices-plain-wordmark {
-    font-size: 54px;
+  font-size: 40px;
 }
 
 .certification-card-content {
-    display: grid;
-    gap: 18px;
-    min-width: 0;
+  display: grid;
+  gap: 14px;
+  min-width: 0;
 }
 
 .certification-header {
-    display: grid;
-    gap: 10px;
-    min-width: 0;
+  display: grid;
+  gap: 8px;
+  min-width: 0;
 }
 
 .certification-header h3 {
-    margin: 0;
-    color: var(--color-primary);
-    font-size: var(--card-title-size);
-    line-height: 1.25;
-    overflow-wrap: anywhere;
+  color: var(--text);
+  font-size: var(--card-title-size);
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .certification-issuer {
-    margin-top: 6px;
-    color: var(--color-muted);
-    font-size: 16px;
-    font-style: italic;
+  color: var(--text-muted);
+  font-size: 14px;
 }
 
 .certification-date {
-    justify-self: start;
-    min-height: 30px;
-    padding: 6px 10px;
-    border-radius: 6px;
-    background: var(--color-accent-soft);
-    color: var(--color-accent);
-    font-size: 13px;
-    font-weight: 700;
-    white-space: nowrap;
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .certification-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    justify-self: start;
-    gap: 8px;
-    min-height: 34px;
-    padding: 6px 14px;
-    border: 1px solid var(--color-primary-light);
-    border-radius: 6px;
-    color: var(--color-primary);
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  gap: 8px;
+  min-height: 34px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.25s ease, color 0.25s ease, background 0.25s ease;
 }
 
 .certification-link:hover {
-    background: var(--color-primary);
-    color: var(--color-surface);
+  border-color: rgba(var(--accent-rgb), 0.5);
+  color: var(--accent);
+  background: var(--accent-soft);
 }
 
 @media (max-width: 820px) {
-    .certifications-grid {
-        grid-template-columns: 1fr;
-    }
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
-    .certifications-grid {
-        gap: 18px;
-    }
+  .certifications-grid {
+    gap: 16px;
+  }
 
-    .certification-card {
-        grid-template-columns: 56px minmax(0, 1fr);
-        gap: 14px;
-        min-height: 0;
-        padding: 16px;
-    }
+  .certification-card {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 14px;
+    padding: 18px;
+  }
 
-    .certification-icon {
-        width: 56px;
-        font-size: 30px;
-    }
+  .certification-icon {
+    width: 50px;
+    font-size: 22px;
+  }
 
-    .certification-icon .devicon-amazonwebservices-plain-wordmark {
-        font-size: 40px;
-    }
-
-    .certification-header h3 {
-        font-size: var(--card-title-size);
-    }
-
-    .certification-issuer {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 420px) {
-    .certification-card {
-        grid-template-columns: 1fr;
-    }
-
-    .certification-icon {
-        width: 64px;
-    }
+  .certification-icon .devicon-amazonwebservices-plain-wordmark {
+    font-size: 32px;
+  }
 }

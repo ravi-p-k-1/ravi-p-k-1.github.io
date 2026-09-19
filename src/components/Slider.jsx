@@ -1,6 +1,8 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight, faUser } from '@fortawesome/free-solid-svg-icons';
+import '../assets/styles/slider.css';
 
 const sliderImages = require.context('../assets/images/slider-images', false, /\.(png|jpe?g|svg|webp)$/);
 
@@ -50,7 +52,9 @@ function normalizeSlide(item) {
 }
 
 export default function Slider({ data = [], showPlaceholder = false }) {
-    const [sliderIndex, setSliderIndex] = useState(0);
+    const [index, setIndex] = useState(0);
+    const [direction, setDirection] = useState(1);
+
     const slides = useMemo(() => {
         return data.map(normalizeSlide).filter((item) => item.photo || showPlaceholder);
     }, [data, showPlaceholder]);
@@ -59,77 +63,90 @@ export default function Slider({ data = [], showPlaceholder = false }) {
         return null;
     }
 
-    const handlePrev = () => {
-        setSliderIndex((prev) => prev === 0 ? slides.length - 1 : prev - 1);
-    }
-    
-    const handleNext = () => {
-        setSliderIndex((prev) => prev === slides.length - 1 ? 0 : prev + 1);
-    }
+    const goTo = (nextIndex, dir) => {
+        setDirection(dir);
+        setIndex(nextIndex);
+    };
 
-  return (
-    <div className='slider' aria-roledescription='carousel'>
-        <div className='slider-prev'>
-            <button type='button' onClick={handlePrev} aria-label='Previous slide'>
-                <FontAwesomeIcon icon={faChevronLeft} />
-            </button>
-        </div>
-        <div className='slider-content'>
-            <div className='slider-track' style={{
-                transform: `translateX(-${sliderIndex*100}%)`
-            }}>
-                {
-                    slides.map((item, index) => {
-                        return (
-                            <div className='slide' key={`${item.name}-${index}`} aria-hidden={sliderIndex !== index}>
-                                <div className='slide-header'>
-                                    {item.photo ? (
-                                        <img
-                                            src={item.photo}
-                                            alt={item.alt}
-                                            style={{
-                                                objectFit: item.imageFit,
-                                                objectPosition: item.imagePosition
-                                            }}
-                                        />
-                                    ) : (
-                                        <div className='slide-image-placeholder' aria-label={`${item.name} profile placeholder`}>
-                                            <FontAwesomeIcon icon={faUser} />
-                                        </div>
-                                    )}
-                                    <div className='slide-title'>
-                                        <h3>{item.name}</h3>
-                                        {item.meta && <div className='slide-meta'>{item.meta}</div>}
-                                    </div>
+    const handlePrev = () => goTo(index === 0 ? slides.length - 1 : index - 1, -1);
+    const handleNext = () => goTo(index === slides.length - 1 ? 0 : index + 1, 1);
+
+    const current = slides[index];
+
+    return (
+        <div className='slider' aria-roledescription='carousel'>
+            <div className='slider-viewport'>
+                <AnimatePresence mode='wait'>
+                    <motion.div
+                        key={`${current.name}-${index}`}
+                        className='slide'
+                        initial={{ opacity: 0, x: direction * 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: direction * -20 }}
+                        transition={{ duration: 0.32, ease: 'easeOut' }}
+                    >
+                        <div className='slide-header'>
+                            {current.photo ? (
+                                <img
+                                    src={current.photo}
+                                    alt={current.alt}
+                                    style={{
+                                        objectFit: current.imageFit,
+                                        objectPosition: current.imagePosition
+                                    }}
+                                />
+                            ) : (
+                                <div className='slide-image-placeholder' aria-label={`${current.name} profile placeholder`}>
+                                    <FontAwesomeIcon icon={faUser} />
                                 </div>
-                                <div className='slide-content'>
-                                    {item.description && <p>{item.description}</p>}
-                                    {item.links.length > 0 && (
-                                        <div className='slide-links' aria-label={`${item.name} links`}>
-                                            {item.links.map((link) => (
-                                                <a
-                                                    key={link.url}
-                                                    href={link.url}
-                                                    target='_blank'
-                                                    rel='noreferrer'
-                                                >
-                                                    {link.label}
-                                                </a>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
+                            )}
+                            <div className='slide-title'>
+                                <h3>{current.name}</h3>
+                                {current.meta && <div className='slide-meta'>{current.meta}</div>}
                             </div>
-                        )
-                    })
-                }
+                        </div>
+                        <div className='slide-content'>
+                            {current.description && <p>{current.description}</p>}
+                            {current.links.length > 0 && (
+                                <div className='slide-links' aria-label={`${current.name} links`}>
+                                    {current.links.map((link) => (
+                                        <a
+                                            key={link.url}
+                                            href={link.url}
+                                            target='_blank'
+                                            rel='noreferrer'
+                                        >
+                                            {link.label}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    </motion.div>
+                </AnimatePresence>
             </div>
+
+            {slides.length > 1 && (
+                <div className='slider-controls'>
+                    <button type='button' className='slider-nav-btn' onClick={handlePrev} aria-label='Previous slide'>
+                        <FontAwesomeIcon icon={faChevronLeft} />
+                    </button>
+                    <div className='slider-dots'>
+                        {slides.map((slide, dotIndex) => (
+                            <button
+                                key={`${slide.name}-${dotIndex}`}
+                                type='button'
+                                className={`slider-dot ${dotIndex === index ? 'is-active' : ''}`}
+                                onClick={() => goTo(dotIndex, dotIndex > index ? 1 : -1)}
+                                aria-label={`Go to slide ${dotIndex + 1}`}
+                            />
+                        ))}
+                    </div>
+                    <button type='button' className='slider-nav-btn' onClick={handleNext} aria-label='Next slide'>
+                        <FontAwesomeIcon icon={faChevronRight} />
+                    </button>
+                </div>
+            )}
         </div>
-        <div className='slider-next'>
-            <button type='button' onClick={handleNext} aria-label='Next slide'>
-                <FontAwesomeIcon icon={faChevronRight} />
-            </button>
-        </div>
-    </div>
-  )
+    )
 }
