@@ -18,13 +18,14 @@ const customSkillIcons = {
 
 const categories = [
   { title: 'Languages', key: 'languages' },
-  { title: 'Frameworks', key: 'frameworks' },
-  { title: 'Libraries', key: 'libraries' },
+  { title: 'Frameworks and Runtime', key: 'frameworksAndRuntime' },
+  { title: 'Libraries and ORM', key: 'librariesAndOrm' },
+  { title: 'Databases and Vector Search', key: 'databasesAndVectorSearch' },
+  { title: 'CMS, Hosting and Web', key: 'cmsHostingAndWeb' },
+  { title: 'AI and Machine Learning', key: 'aiAndMachineLearning' },
   { title: 'Tools and DevOps', key: 'toolsAndDevOps' },
-  { title: 'Generative AI', key: 'generativeAi' },
-  { title: 'Databases', key: 'databases' },
-  { title: 'CMS and APIs', key: 'cmsAndApi' },
-  { title: 'Agile Methodologies', key: 'agileMethodologies', forceFallback: true }
+  { title: 'AI Developer Tools', key: 'aiDeveloperTools' },
+  { title: 'Agile Methodologies', key: 'agileMethodologies' }
 ];
 
 function SkillIcon({ skill }) {
@@ -75,22 +76,16 @@ export default function Skills() {
                 <div className='skills-section-title'>{category.title}</div>
                 <div className='skills-list'>
                   {
-                    items.map((skill, index) => {
-                      const resolvedSkill = category.forceFallback && skill.isDeviconAvailable === undefined
-                        ? { ...skill, isDeviconAvailable: false }
-                        : skill;
-
-                      return (
-                        <div
-                          key={skill.name}
-                          className='skill-container'
-                          style={{ transitionDelay: `${Math.min(index * 25, 250)}ms` }}
-                        >
-                          <SkillIcon skill={resolvedSkill} />
-                          <div className='skill-name'>{skill.name}</div>
-                        </div>
-                      );
-                    })
+                    items.map((skill, index) => (
+                      <div
+                        key={skill.name}
+                        className='skill-container'
+                        style={{ transitionDelay: `${Math.min(index * 25, 250)}ms` }}
+                      >
+                        <SkillIcon skill={skill} />
+                        <div className='skill-name'>{skill.name}</div>
+                      </div>
+                    ))
                   }
                 </div>
               </ScrollReveal>

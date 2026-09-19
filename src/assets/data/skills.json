@@ -9,57 +9,75 @@
             "familiarity": "High"
         },
         {
-            "name": "HTML5",
+            "name": "HTML",
+            "deviconCode": "html5",
             "familiarity": "High"
         },
         {
-            "name": "CSS3",
+            "name": "CSS",
+            "deviconCode": "css3",
             "familiarity": "High"
         },
         {
-            "name": "Python",
-            "familiarity": "Medium"
+            "name": "SQL",
+            "familiarity": "High",
+            "isDeviconAvailable": false,
+            "initials": "SQL"
+        },
+        {
+            "name": "C++",
+            "deviconCode": "cplusplus",
+            "familiarity": "High"
         },
         {
             "name": "Java",
             "familiarity": "Medium"
         },
         {
-            "name": "C++",
-            "deviconCode": "cplusplus",
-            "familiarity": "High"
+            "name": "Python",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "PHP",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "SCSS",
+            "deviconCode": "sass",
+            "familiarity": "Medium"
         }
     ],
-    "frameworks": [
+    "frameworksAndRuntime": [
         {
             "name": "React",
             "familiarity": "High"
         },
         {
             "name": "Angular",
-            "familiarity": "Medium"
+            "familiarity": "High"
         },
         {
             "name": "Node.js",
+            "deviconCode": "nodejs",
+            "familiarity": "High"
+        },
+        {
+            "name": "Express.js",
             "familiarity": "High",
-            "deviconCode": "nodejs"
+            "isDeviconAvailable": false,
+            "initials": "EX"
         },
         {
-            "name": "Astro.js",
-            "familiarity": "Low",
-            "deviconCode": "astro"
-        },
-        {
-            "name": "Spring Boot",
-            "familiarity": "Low",
-            "deviconCode": "spring"
+            "name": "FastAPI",
+            "familiarity": "Medium"
         }
     ],
-    "libraries": [
+    "librariesAndOrm": [
         {
             "name": "Highcharts",
             "familiarity": "High",
-            "isDeviconAvailable": false
+            "isDeviconAvailable": false,
+            "initials": "HC"
         },
         {
             "name": "AG Grid",
@@ -75,109 +93,49 @@
             "familiarity": "High"
         },
         {
-            "name": "Xenova Transformers",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "XT"
-        },
-        {
             "name": "Bootstrap",
             "familiarity": "High"
         },
         {
-            "name": "Material-UI",
-            "familiarity": "High",
-            "deviconCode": "materialui"
+            "name": "Material UI",
+            "deviconCode": "materialui",
+            "familiarity": "High"
         },
         {
             "name": "Sequelize",
             "familiarity": "High"
         },
         {
-            "name": "Hibernate",
-            "familiarity": "Low"
-        }
-    ],
-    "toolsAndDevOps": [
-        {
-            "name": "Git",
-            "familiarity": "High"
+            "name": "LangChain",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "LC"
         },
         {
-            "name": "GitHub Actions",
-            "familiarity": "Low",
-            "deviconCode": "githubactions"
+            "name": "Pydantic",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "PD"
         },
         {
-            "name": "Docker",
+            "name": "Scikit-learn",
+            "deviconCode": "scikitlearn",
             "familiarity": "Medium"
         },
         {
-            "name": "AWS",
-            "familiarity": "Medium",
-            "deviconCode": "amazonwebservices"
-        },
-        {
-            "name": "Firebase",
-            "familiarity": "High"
-        },
-        {
-            "name": "Figma",
-            "familiarity": "High"
-        },
-        {
-            "name": "Jira",
-            "familiarity": "High"
-        },
-        {
-            "name": "npm Publishing",
+            "name": "TensorFlow",
             "familiarity": "Medium",
             "isDeviconAvailable": false,
-            "initials": "NP"
+            "initials": "TF"
+        },
+        {
+            "name": "Zod",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "ZD"
         }
     ],
-    "generativeAi": [
-        {
-            "name": "Codex CLI",
-            "familiarity": "High",
-            "customIcon": "codex"
-        },
-        {
-            "name": "GitHub Copilot",
-            "familiarity": "High",
-            "customIcon": "githubcopilot"
-        },
-        {
-            "name": "ChatGPT",
-            "familiarity": "High",
-            "icon": "openai"
-        },
-        {
-            "name": "Retrieval-Augmented Generation (RAG)",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "RAG"
-        },
-        {
-            "name": "Prompt Engineering",
-            "familiarity": "High",
-            "isDeviconAvailable": false,
-            "initials": "PE"
-        },
-        {
-            "name": "Semantic Search",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "SS"
-        },
-        {
-            "name": "Model Context Protocol (MCP)",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "MCP"
-        }
-    ],
-    "databases": [
+    "databasesAndVectorSearch": [
         {
             "name": "PostgreSQL",
             "familiarity": "High"
@@ -188,7 +146,11 @@
         },
         {
             "name": "MySQL",
-            "familiarity": "High"
+            "familiarity": "Medium"
+        },
+        {
+            "name": "SQLite",
+            "familiarity": "Medium"
         },
         {
             "name": "pgvector",
@@ -197,32 +159,155 @@
             "initials": "PG"
         }
     ],
-    "cmsAndApi": [
+    "cmsHostingAndWeb": [
         {
             "name": "WordPress",
             "familiarity": "High"
         },
         {
-            "name": "Directus.io",
-            "familiarity": "Low",
+            "name": "REST APIs",
+            "familiarity": "High",
             "isDeviconAvailable": false
         },
         {
-            "name": "RESTful APIs",
+            "name": "Responsive Web Design",
             "familiarity": "High",
             "isDeviconAvailable": false
+        },
+        {
+            "name": "Figma",
+            "familiarity": "High"
+        }
+    ],
+    "aiAndMachineLearning": [
+        {
+            "name": "Gemini API",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false
+        },
+        {
+            "name": "Anthropic API",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "ANT"
+        },
+        {
+            "name": "Retrieval-Augmented Generation (RAG)",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "RAG"
+        },
+        {
+            "name": "Embeddings",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "EMB"
+        },
+        {
+            "name": "Vector Databases",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false
+        },
+        {
+            "name": "Semantic Search",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "SS"
+        },
+        {
+            "name": "NLP",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "NLP"
+        },
+        {
+            "name": "Prompt Engineering",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "PE"
+        },
+        {
+            "name": "Model Context Protocol (MCP)",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "MCP"
+        }
+    ],
+    "toolsAndDevOps": [
+        {
+            "name": "Git",
+            "familiarity": "High"
+        },
+        {
+            "name": "GitHub Actions",
+            "deviconCode": "githubactions",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "Docker",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "Jira",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "AWS",
+            "deviconCode": "amazonwebservices",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "Google Cloud Functions",
+            "deviconCode": "googlecloud",
+            "familiarity": "Medium"
+        },
+        {
+            "name": "npm Publishing",
+            "deviconCode": "npm",
+            "familiarity": "Medium"
+        }
+    ],
+    "aiDeveloperTools": [
+        {
+            "name": "GitHub Copilot",
+            "familiarity": "Medium",
+            "customIcon": "githubcopilot"
+        },
+        {
+            "name": "ChatGPT",
+            "familiarity": "Medium",
+            "icon": "openai"
+        },
+        {
+            "name": "Codex",
+            "familiarity": "Medium",
+            "customIcon": "codex"
+        },
+        {
+            "name": "Claude Code",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "CC"
+        },
+        {
+            "name": "Claude Agent SDK",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "SDK"
         }
     ],
     "agileMethodologies": [
         {
             "name": "Scrum",
-            "familiarity": "Medium"
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "SCR"
         },
         {
             "name": "Kanban",
-            "familiarity": "Medium"
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "KAN"
         }
     ]
 }
-
-
