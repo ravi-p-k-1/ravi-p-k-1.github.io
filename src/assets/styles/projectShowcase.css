@@ -63,9 +63,15 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   background: var(--surface);
+  height: 320px;
+}
+
+.showcase--compact .showcase-window {
+  height: 230px;
 }
 
 .showcase-slide {
+  height: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   cursor: grab;
@@ -79,7 +85,6 @@
 .showcase-media {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
   background: var(--bg-elevated);
   border-right: 1px solid var(--border);
 }
@@ -110,13 +115,13 @@
 }
 
 .showcase-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: safe center;
   gap: 18px;
-  padding: 44px;
+  padding: 40px;
   min-width: 0;
-  max-height: 100%;
   overflow-y: auto;
 }
 
@@ -294,23 +299,35 @@
 }
 
 @media (max-width: 900px) {
+  /* Media and content stack instead of sitting side by side, so they
+     no longer need to share one row's height via grid stretch. */
+  .showcase-window,
+  .showcase--compact .showcase-window {
+    height: auto;
+  }
+
   .showcase-slide {
+    height: auto;
     grid-template-columns: 1fr;
   }
 
   .showcase-media {
-    aspect-ratio: 16 / 9;
+    height: 280px;
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
 
-  .showcase-content {
-    padding: 30px;
+  .showcase--compact .showcase-media {
+    height: 200px;
   }
 
-  /* Once media and content stack, the stage's height is no longer a
-     single shared row, so centering the arrows against it would drift
-     with content length. Overlay them on the media area instead. */
+  .showcase-content {
+    height: auto;
+    padding: 28px;
+  }
+
+  /* Arrows overlay the media at a fixed offset instead of centering
+     against the whole (now content-length-dependent) stacked height. */
   .showcase-stage,
   .showcase--compact .showcase-stage {
     grid-template-columns: minmax(0, 1fr);
@@ -320,13 +337,17 @@
   .showcase-arrow,
   .showcase--compact .showcase-arrow {
     position: absolute;
-    top: 25%;
+    top: 130px;
     z-index: 2;
     width: 40px;
     height: 40px;
     font-size: 14px;
     background: rgba(6, 8, 16, 0.65);
     backdrop-filter: blur(6px);
+  }
+
+  .showcase--compact .showcase-arrow {
+    top: 90px;
   }
 
   .showcase-arrow-prev {
@@ -339,7 +360,8 @@
 }
 
 @media (max-width: 640px) {
-  .showcase-content {
+  .showcase-content,
+  .showcase--compact .showcase-content {
     padding: 24px;
     gap: 14px;
   }
