@@ -1,7 +1,7 @@
 /* Reviews */
 
 .reviews-section .slider-viewport {
-  min-height: 380px;
+  height: 480px;
 }
 
 .reviews-section .slide {
@@ -58,7 +58,7 @@
 
 @media (max-width: 640px) {
   .reviews-section .slider-viewport {
-    min-height: 0;
+    height: 420px;
   }
 
   .reviews-section .slide-header {

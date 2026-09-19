@@ -10,13 +10,17 @@
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--surface);
-  min-height: 260px;
+  height: 320px;
 }
 
 .slide {
+  height: 100%;
   display: grid;
+  align-content: start;
   gap: 16px;
   padding: 24px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .slide-header {
