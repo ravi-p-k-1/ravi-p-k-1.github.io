@@ -79,6 +79,7 @@
 .showcase-media {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 16 / 10;
   background: var(--bg-elevated);
   border-right: 1px solid var(--border);
 }
@@ -109,13 +110,13 @@
 }
 
 .showcase-content {
-  height: 460px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: safe center;
   gap: 18px;
   padding: 44px;
   min-width: 0;
+  max-height: 100%;
   overflow-y: auto;
 }
 
@@ -272,7 +273,6 @@
 }
 
 .showcase--compact .showcase-content {
-  height: 260px;
   padding: 28px;
   gap: 14px;
 }
@@ -305,12 +305,12 @@
   }
 
   .showcase-content {
-    height: 360px;
     padding: 30px;
   }
-}
 
-@media (max-width: 640px) {
+  /* Once media and content stack, the stage's height is no longer a
+     single shared row, so centering the arrows against it would drift
+     with content length. Overlay them on the media area instead. */
   .showcase-stage,
   .showcase--compact .showcase-stage {
     grid-template-columns: minmax(0, 1fr);
@@ -336,10 +336,10 @@
   .showcase-arrow-next {
     right: 12px;
   }
+}
 
-  .showcase-content,
-  .showcase--compact .showcase-content {
-    height: 320px;
+@media (max-width: 640px) {
+  .showcase-content {
     padding: 24px;
     gap: 14px;
   }
