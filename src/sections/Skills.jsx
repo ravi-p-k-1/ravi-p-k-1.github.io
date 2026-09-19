@@ -19,12 +19,12 @@ const customSkillIcons = {
 const categories = [
   { title: 'Languages', key: 'languages' },
   { title: 'Frameworks and Runtime', key: 'frameworksAndRuntime' },
+  { title: 'AI and Machine Learning', key: 'aiAndMachineLearning' },
+  { title: 'AI Developer Tools', key: 'aiDeveloperTools' },
   { title: 'Libraries and ORM', key: 'librariesAndOrm' },
   { title: 'Databases and Vector Search', key: 'databasesAndVectorSearch' },
-  { title: 'CMS, Hosting and Web', key: 'cmsHostingAndWeb' },
-  { title: 'AI and Machine Learning', key: 'aiAndMachineLearning' },
   { title: 'Tools and DevOps', key: 'toolsAndDevOps' },
-  { title: 'AI Developer Tools', key: 'aiDeveloperTools' },
+  { title: 'CMS, Hosting and Web', key: 'cmsHostingAndWeb' },
   { title: 'Agile Methodologies', key: 'agileMethodologies' }
 ];
 

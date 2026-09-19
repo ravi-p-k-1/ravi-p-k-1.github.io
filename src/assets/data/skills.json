@@ -72,6 +72,89 @@
             "familiarity": "Medium"
         }
     ],
+    "aiAndMachineLearning": [
+        {
+            "name": "Gemini API",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false
+        },
+        {
+            "name": "Anthropic API",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "ANT"
+        },
+        {
+            "name": "Retrieval-Augmented Generation (RAG)",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "RAG"
+        },
+        {
+            "name": "Embeddings",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "EMB"
+        },
+        {
+            "name": "Vector Databases",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false
+        },
+        {
+            "name": "Semantic Search",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "SS"
+        },
+        {
+            "name": "NLP",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "NLP"
+        },
+        {
+            "name": "Prompt Engineering",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "PE"
+        },
+        {
+            "name": "Model Context Protocol (MCP)",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "MCP"
+        }
+    ],
+    "aiDeveloperTools": [
+        {
+            "name": "GitHub Copilot",
+            "familiarity": "Medium",
+            "customIcon": "githubcopilot"
+        },
+        {
+            "name": "ChatGPT",
+            "familiarity": "Medium",
+            "icon": "openai"
+        },
+        {
+            "name": "Codex",
+            "familiarity": "Medium",
+            "customIcon": "codex"
+        },
+        {
+            "name": "Claude Code",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "CC"
+        },
+        {
+            "name": "Claude Agent SDK",
+            "familiarity": "Medium",
+            "isDeviconAvailable": false,
+            "initials": "SDK"
+        }
+    ],
     "librariesAndOrm": [
         {
             "name": "Highcharts",
@@ -159,80 +242,6 @@
             "initials": "PG"
         }
     ],
-    "cmsHostingAndWeb": [
-        {
-            "name": "WordPress",
-            "familiarity": "High"
-        },
-        {
-            "name": "REST APIs",
-            "familiarity": "High",
-            "isDeviconAvailable": false
-        },
-        {
-            "name": "Responsive Web Design",
-            "familiarity": "High",
-            "isDeviconAvailable": false
-        },
-        {
-            "name": "Figma",
-            "familiarity": "High"
-        }
-    ],
-    "aiAndMachineLearning": [
-        {
-            "name": "Gemini API",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false
-        },
-        {
-            "name": "Anthropic API",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "ANT"
-        },
-        {
-            "name": "Retrieval-Augmented Generation (RAG)",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "RAG"
-        },
-        {
-            "name": "Embeddings",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "EMB"
-        },
-        {
-            "name": "Vector Databases",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false
-        },
-        {
-            "name": "Semantic Search",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "SS"
-        },
-        {
-            "name": "NLP",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "NLP"
-        },
-        {
-            "name": "Prompt Engineering",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "PE"
-        },
-        {
-            "name": "Model Context Protocol (MCP)",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "MCP"
-        }
-    ],
     "toolsAndDevOps": [
         {
             "name": "Git",
@@ -267,33 +276,24 @@
             "familiarity": "Medium"
         }
     ],
-    "aiDeveloperTools": [
+    "cmsHostingAndWeb": [
         {
-            "name": "GitHub Copilot",
-            "familiarity": "Medium",
-            "customIcon": "githubcopilot"
+            "name": "WordPress",
+            "familiarity": "High"
         },
         {
-            "name": "ChatGPT",
-            "familiarity": "Medium",
-            "icon": "openai"
+            "name": "REST APIs",
+            "familiarity": "High",
+            "isDeviconAvailable": false
         },
         {
-            "name": "Codex",
-            "familiarity": "Medium",
-            "customIcon": "codex"
+            "name": "Responsive Web Design",
+            "familiarity": "High",
+            "isDeviconAvailable": false
         },
         {
-            "name": "Claude Code",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "CC"
-        },
-        {
-            "name": "Claude Agent SDK",
-            "familiarity": "Medium",
-            "isDeviconAvailable": false,
-            "initials": "SDK"
+            "name": "Figma",
+            "familiarity": "High"
         }
     ],
     "agileMethodologies": [
