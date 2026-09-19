@@ -163,6 +163,13 @@
   color: var(--accent);
 }
 
+.showcase-description-text {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
 .showcase-tech {
   display: flex;
   flex-wrap: wrap;
@@ -250,6 +257,42 @@
   white-space: nowrap;
 }
 
+/* Compact variant, for nesting inside a smaller card (e.g. a work
+   experience timeline entry) rather than running as a full section. */
+
+.showcase--compact .showcase-stage {
+  grid-template-columns: 40px minmax(0, 1fr) 40px;
+  gap: 12px;
+}
+
+.showcase--compact .showcase-arrow {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+}
+
+.showcase--compact .showcase-content {
+  height: 260px;
+  padding: 28px;
+  gap: 14px;
+}
+
+.showcase--compact .showcase-name {
+  font-size: 19px;
+}
+
+.showcase--compact .showcase-progress {
+  margin-bottom: 16px;
+}
+
+.showcase--compact .showcase-tabs {
+  margin-top: 16px;
+}
+
+.showcase--compact .showcase-tab {
+  padding: 8px 14px;
+}
+
 @media (max-width: 900px) {
   .showcase-slide {
     grid-template-columns: 1fr;
@@ -268,12 +311,14 @@
 }
 
 @media (max-width: 640px) {
-  .showcase-stage {
+  .showcase-stage,
+  .showcase--compact .showcase-stage {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
   }
 
-  .showcase-arrow {
+  .showcase-arrow,
+  .showcase--compact .showcase-arrow {
     position: absolute;
     top: 25%;
     z-index: 2;
@@ -292,7 +337,8 @@
     right: 12px;
   }
 
-  .showcase-content {
+  .showcase-content,
+  .showcase--compact .showcase-content {
     height: 320px;
     padding: 24px;
     gap: 14px;

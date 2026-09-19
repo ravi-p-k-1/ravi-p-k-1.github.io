@@ -1,6 +1,6 @@
 import workExperienceData from '../assets/data/work-experience.json';
 import '../assets/styles/workExperience.css';
-import Slider from '../components/Slider';
+import ProjectShowcase from '../components/ProjectShowcase';
 import SectionHeading from '../components/SectionHeading';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -56,7 +56,11 @@ export default function WorkExperience() {
                     { experience.isDisplayProjects && (
                       <div className='selected-projects'>
                         <h4>Selected Projects</h4>
-                        <Slider data={experience.projects} />
+                        <ProjectShowcase
+                          projects={experience.projects}
+                          compact
+                          ariaLabel={`${experience.company} selected projects`}
+                        />
                       </div>
                     ) }
                   </div>

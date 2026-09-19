@@ -7,7 +7,7 @@ import '../assets/styles/projectShowcase.css';
 
 const SWIPE_THRESHOLD = 80;
 
-export default function ProjectShowcase({ projects = [] }) {
+export default function ProjectShowcase({ projects = [], compact = false, ariaLabel = 'Projects' }) {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(1);
 
@@ -37,13 +37,16 @@ export default function ProjectShowcase({ projects = [] }) {
   const image = getProjectImage(project.image);
   const links = getProjectLinks(project.links);
   const isCompleted = project.progress === 'Completed';
+  const descriptionItems = Array.isArray(project.description)
+    ? project.description
+    : [project.description].filter(Boolean);
 
   return (
     <div
-      className='showcase'
+      className={`showcase ${compact ? 'showcase--compact' : ''}`.trim()}
       role='region'
       aria-roledescription='carousel'
-      aria-label='Projects'
+      aria-label={ariaLabel}
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
@@ -85,7 +88,15 @@ export default function ProjectShowcase({ projects = [] }) {
             >
               {image && (
                 <div className='showcase-media'>
-                  <img src={image} alt={project.name} draggable={false} />
+                  <img
+                    src={image}
+                    alt={project.name}
+                    draggable={false}
+                    style={{
+                      objectFit: project.imageFit,
+                      objectPosition: project.imagePosition
+                    }}
+                  />
                   <span className='showcase-counter'>
                     {String(index + 1).padStart(2, '0')} / {String(count).padStart(2, '0')}
                   </span>
@@ -99,13 +110,21 @@ export default function ProjectShowcase({ projects = [] }) {
                   <span className={isCompleted ? 'is-done' : ''}>{project.progress}</span>
                 </div>
                 <h3 className='showcase-name'>{project.name}</h3>
-                <ul className='showcase-description'>
-                  {
-                    project.description.map((point, pointIndex) => (
-                      <li key={pointIndex}>{point}</li>
+                {
+                  Array.isArray(project.description) ? (
+                    <ul className='showcase-description'>
+                      {
+                        descriptionItems.map((point, pointIndex) => (
+                          <li key={pointIndex}>{point}</li>
+                        ))
+                      }
+                    </ul>
+                  ) : (
+                    descriptionItems.map((paragraph, pointIndex) => (
+                      <p key={pointIndex} className='showcase-description-text'>{paragraph}</p>
                     ))
-                  }
-                </ul>
+                  )
+                }
                 <div className='showcase-tech'>
                   {
                     project.technologies.map((technology) => (
