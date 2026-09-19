@@ -111,6 +111,20 @@ export default function ProjectShowcase({ projects = [], compact = false, ariaLa
                 </div>
                 <h3 className='showcase-name'>{project.name}</h3>
                 {
+                  links.length > 0 && (
+                    <div className='showcase-links' aria-label={`${project.name} links`}>
+                      {
+                        links.map((link) => (
+                          <a key={link.url} href={link.url} target='_blank' rel='noreferrer'>
+                            <FontAwesomeIcon icon={getLinkIcon(link.label)} />
+                            {link.label}
+                          </a>
+                        ))
+                      }
+                    </div>
+                  )
+                }
+                {
                   Array.isArray(project.description) ? (
                     <ul className='showcase-description'>
                       {
@@ -132,20 +146,6 @@ export default function ProjectShowcase({ projects = [], compact = false, ariaLa
                     ))
                   }
                 </div>
-                {
-                  links.length > 0 && (
-                    <div className='showcase-links' aria-label={`${project.name} links`}>
-                      {
-                        links.map((link) => (
-                          <a key={link.url} href={link.url} target='_blank' rel='noreferrer'>
-                            <FontAwesomeIcon icon={getLinkIcon(link.label)} />
-                            {link.label}
-                          </a>
-                        ))
-                      }
-                    </div>
-                  )
-                }
               </div>
             </motion.div>
           </AnimatePresence>
