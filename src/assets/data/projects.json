@@ -1,18 +1,35 @@
 [
     {
         "name": "InsightIQ",
-        "technologies": ["React", "Express", "PostgreSQL", "pgvector", "Xenova", "Gemini API", "FRED API"],
+        "technologies": ["Node.js", "Model Context Protocol (MCP)", "FRED API", "npm"],
         "contribution": "Built from Scratch",
         "progress": "Completed",
         "description": [
-            "Engineered a full-stack economic research platform that converts natural-language questions into validated FRED datasets, interactive visualizations, and grounded AI-generated analysis.",
-            "Implemented semantic retrieval across 200K+ FRED series using PostgreSQL, pgvector, and local Xenova embeddings, preventing unvalidated series IDs from reaching generated insights.",
-            "Built offline indexing and Express.js orchestration workflows for metadata enrichment, embedding generation, vector retrieval, observation validation, and Gemini-powered analysis.",
-            "Added structured error handling, partial-failure fallbacks, Docker-based setup, GitHub Actions CI, and retrieval evaluation using 35 benchmark economic questions."
+            "Rebuilt InsightIQ as a local MCP server that gives AI agents such as Claude Code and Claude Desktop tool-based access to real FRED (Federal Reserve Economic Data) series and observations.",
+            "Published and versioned the server as insightiq-mcp on npm, distributed via npx so any MCP client can install and run it with zero setup beyond a FRED API key.",
+            "Designed search, retrieval, and tag-discovery tools that return only validated, real FRED series and raw observations, leaving all analysis and explanation to the calling agent's own LLM.",
+            "Built an MCP-level eval suite measuring retrieval recall against a benchmark question set (45.3% on raw questions vs. 62.4% with curated query plans) and wired GitHub Actions CI for syntax checks."
         ],
         "image": "insightiq.png",
         "links": {
-            "github": "https://github.com/ravi-p-k-1/InsightIQ"
+            "github": "https://github.com/ravi-p-k-1/InsightIQ",
+            "npm": "https://www.npmjs.com/package/insightiq-mcp"
+        }
+    },
+    {
+        "name": "TravelGlow",
+        "technologies": ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Docker", "YouCam API", "WeatherAPI.com", "Gemini API"],
+        "contribution": "Built from Scratch",
+        "progress": "Completed",
+        "description": [
+            "Built an end-to-end skincare planning platform that combines YouCam skin analysis with destination weather to generate personalized skin forecasts, packing lists, and product recommendations.",
+            "Integrated YouCam, WeatherAPI.com, and Gemini via normalized adapters and asynchronous polling, feeding a versioned rules-based engine that evaluates 5 skin and climate risk categories while restricting generative AI to explaining validated results rather than making decisions.",
+            "Developed a PostgreSQL data model with 9 automatic migrations, traceable forecast inputs, and a curated catalog of 20 relevance-ranked products, plus privacy-conscious in-memory processing for selfie uploads.",
+            "Containerized the React frontend, Express API, and PostgreSQL database with Docker Compose and production nginx configuration, backed by 21 automated tests covering forecast rules, ranking, and analytics."
+        ],
+        "image": "travelglow.png",
+        "links": {
+            "github": "https://github.com/ravi-p-k-1/TravelGlow"
         }
     },
     {

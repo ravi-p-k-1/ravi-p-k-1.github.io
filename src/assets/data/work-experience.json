@@ -1,5 +1,19 @@
 [
     {
+        "company": "DreamStudio",
+        "location": "Atlanta, GA (Remote)",
+        "position": "Software Engineer",
+        "startDate": "2026-06-01",
+        "endDate": "Present",
+        "description": [
+            "Built a schema-constrained LLM extraction pipeline (Claude Agent SDK + Pydantic) with self-correcting tool-call validation and evidence-grounding checks, eliminating hallucinated/malformed output without human review.",
+            "Designed a GitHub Actions CI/CD pipeline that auto-processes new transcripts end-to-end and opens draft PRs for review, enabling zero-touch operation with human approval as the only merge gate.",
+            "Implemented fail-fast credential guardrails to prevent unintended paid-API billing and credential/data leakage in CI logs.",
+            "Wrote a fully offline test suite (fake-extractor pattern) covering the CLI, validation, and processing layers, enabling deterministic CI runs with no live API dependency.",
+            "Built idempotent, failure-safe file lifecycle management so partial failures never lose data or corrupt existing outputs on retry."
+        ]
+    },
+    {
         "company": "CBPR, University of the Pacific",
         "location": "Stockton, CA, USA",
         "position": "Software Developer",
