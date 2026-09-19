@@ -66,10 +66,6 @@
   height: 320px;
 }
 
-.showcase--compact .showcase-window {
-  height: 230px;
-}
-
 .showcase-slide {
   height: 100%;
   display: grid;
@@ -317,10 +313,6 @@
     border-bottom: 1px solid var(--border);
   }
 
-  .showcase--compact .showcase-media {
-    height: 200px;
-  }
-
   .showcase-content {
     height: auto;
     padding: 28px;
@@ -344,10 +336,6 @@
     font-size: 14px;
     background: rgba(6, 8, 16, 0.65);
     backdrop-filter: blur(6px);
-  }
-
-  .showcase--compact .showcase-arrow {
-    top: 90px;
   }
 
   .showcase-arrow-prev {
